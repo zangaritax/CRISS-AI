@@ -58,7 +58,7 @@ const chatbotCommand = async (m, Matrix) => {
 
         const responseData = await response.json();
         const botReply = responseData.result || 'No response received';
-        const formattedReply = `*JOEL-MD AI ASSISTANT *\n\nHello ${senderName},\n\n${botReply}`;
+        const formattedReply = `*CRISS AI ASSISTANT *\n\nHello ${senderName},\n\n${botReply}`;
 
         // Send the AI response to the user
         await Matrix.sendMessage(senderId, { text: formattedReply }, { quoted: m });
