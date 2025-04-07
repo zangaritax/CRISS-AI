@@ -38,6 +38,11 @@
       "required": false,
       "value": "true"
       },
+    "ANTI_DELETE_PATH": {
+      "description": "make it true for use anti delete",
+      "required": true,
+      "value": "true"
+    },
     "AUTOLIKE_EMOJI": {
       "description": "Input your custom status like emoji else leave blank to use default => 💚",
       "required": false,
