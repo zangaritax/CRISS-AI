@@ -152,10 +152,10 @@ const Lyrics = async (m, Matrix) => {
                   text: lyrics
                 }),
                 footer: proto.Message.InteractiveMessage.Footer.create({
-                  text: "> *ρσωєя∂ ву ℓσя∂ χ ʝσєℓ*"
+                  text: "> *ρσωєя∂ ву ¢яιѕѕ νєνσ*"
                 }),
                 header: proto.Message.InteractiveMessage.Header.create({
-                  title: "ʝσєℓ χ∂ ν⁷",
+                  title: "¢яιѕѕ αι",
                   subtitle: "ℓуяι¢ѕ ƒιη∂єя",
                   hasMediaAttachment: false
                 }),
