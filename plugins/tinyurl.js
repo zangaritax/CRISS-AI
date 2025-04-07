@@ -22,7 +22,7 @@ const shortenUrl = async (m, sock) => {
 
         m.from,
 
-        { text: "ρℓєαѕє ρяσνι∂є α υяℓ тσ ѕнσятєη. єχαмρℓє:!shortenurl https://github.com/joeljamestech/JOEL-XMD*" },
+        { text: "ρℓєαѕє ρяσνι∂є α υяℓ тσ ѕнσятєη. єχαмρℓє:!shortenurl https://github.com/criss-vevo/CRISS-AI*" },
 
         { quoted: m }
 
@@ -46,8 +46,7 @@ const shortenUrl = async (m, sock) => {
 
         const shortenedUrl = data.BK9.url;
 
-        const responseText = `*ᴊᴏᴇʟ xᴍᴅ sʜᴏʀᴛᴇɴ ᴜʀʟ*\n\n*ᴏʀɪɢɪɴᴀʟ ᴜʀʟ*: *${originalUrl}*\n*sʜᴏʀᴛᴇɴᴇᴅ ᴜʀʟ:* *${shortenedUrl}\n\n _ᴛᴀᴘ ᴀɴᴅ ʜᴏʟᴅ ᴏɴ ᴛʜᴇ sʜᴏʀᴛᴇɴᴇᴅ ᴜʀʟ ᴛᴏ ᴄᴏᴘʏ ɪᴛ_\n\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴊᴏᴇʟ ᴊᴀᴍᴇsᴛᴇᴄʜ*`;
-
+        const responseText = `*ᴄʀɪss ᴀɪ sʜᴏʀᴛᴇɴ ᴜʀʟ*\n\n*ᴏʀɪɢɪɴᴀʟ ᴜʀʟ*: *${originalUrl}*\n*sʜᴏʀᴛᴇɴᴇᴅ ᴜʀʟ:* *${shortenedUrl}\n\n _ᴛᴀᴘ ᴀɴᴅ ʜᴏʟᴅ ᴏɴ ᴛʜᴇ sʜᴏʀᴛᴇɴᴇᴅ ᴜʀʟ ᴛᴏ ᴄᴏᴘʏ ɪᴛ_\n\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ
         await sock.sendMessage(
 
           m.from,
@@ -62,9 +61,9 @@ const shortenUrl = async (m, sock) => {
 
               forwardedNewsletterMessageInfo: {
 
-                newsletterJid: "120363317462952356@newsletter",
+                newsletterJid: "120363378608564635@newsletter",
 
-                newsletterName: "ᴊᴏᴇʟ xᴍᴅ ʙᴏᴛ",
+                newsletterName: "CRISS AI SUPPORT",
 
                 serverMessageId: -1,
 
@@ -74,13 +73,13 @@ const shortenUrl = async (m, sock) => {
 
               externalAdReply: {
 
-                title: "ᴊᴏᴇʟ xᴍᴅ ᴠ⁷ ʙᴏᴛ",
+                title: "CRISS AI  SUPPORT",
 
                 body: "υяℓ ѕнσятєηєя ѕєяνι¢e",
 
                 thumbnailUrl: "", // Add thumbnail URL if required
 
-                sourceUrl: "https://whatsapp.com/channel/0029Vak2PevK0IBh2pKJPp2K", // Source URL
+                sourceUrl: "https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g", // Source URL
 
                 mediaType: 1,
 
@@ -118,11 +117,11 @@ const shortenUrl = async (m, sock) => {
 
             externalAdReply: {
 
-              title: "ᴊᴏᴇʟ xᴅ ᴠ⁷ ʙᴏᴛ",
+              title: "CRISS AI SUPPORT",
 
               body: "ѕнσят υяℓ ѕєяνι¢єѕ",
 
-              sourceUrl: "https://whatsapp.com/channel/0029Vak2PevK0IBh2pKJPp2K",
+              sourceUrl: "https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g",
 
               mediaType: 1,
 
