@@ -1,11 +1,11 @@
 {
-  "name": "ᴊᴏᴇʟ xᴍᴅ ʙᴏᴛ",
-  "description": "ᴀ ᴊᴀᴠᴀsᴄʀɪᴘᴛ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ ʟᴏʀᴅ ᴊᴏᴇʟ",
+  "name": "ᴄʀɪss ᴀɪ ʙᴏᴛ",
+  "description": "ᴀ ᴊᴀᴠᴀsᴄʀɪᴘᴛ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ",
   "keywords": [
     "whatsapp bot"
   ],
-  "logo":"https://raw.githubusercontent.com/joeljamestech2/JOEL-XMD/refs/heads/main/mydata/media/joelXbot.jpg",
-  "repository": "https://github.com/Ethix-Xsid/Ethix-MD",
+  "logo":"https://files.catbox.moe/gs8gi2.jpg",
+  "repository": "https://github.com/criss-vevo/CRISS-AI",
   "stack": "container",
   "env": { 
       "SESSION_ID": {
@@ -51,7 +51,12 @@
     "SUDO_NUMBER": {
       "description": "Put Sudo Numbers separated by comma Here. Sudos are limited to owner commands else leave blank",
       "required": false,
-      "value": "255781144539"
+      "value": "255687068672"
+    },
+        "OWNER_NAME": {
+      "description": "Your name as the bot owner",
+      "required": true,
+      "value": "CRISS VEVO"
     },
     "AUTO_READ": {
       "description": "make it true if you want bot to read message",
