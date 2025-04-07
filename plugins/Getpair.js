@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiBaseUrl = 'https://id-design11-be284994241c.herokuapp.com/?number='; // Your API endpoint
+const apiBaseUrl = 'https://id-design11-be284994241c.herokuapp.com'; // Your API endpoint
 
 const getPairingCode = async (m, Matrix) => {
   const prefixMatch = m.body.match(/^[\\/!#.]/);
