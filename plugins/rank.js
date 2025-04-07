@@ -50,16 +50,16 @@ const rank = async (m, sock) => {
         contextInfo: {
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363317462952356@newsletter',
-            newsletterName: "ᴊᴏᴇʟ xᴅ ʙᴏᴛ",
+            newsletterJid: '120363378608564635@newsletter',
+            newsletterName: "CRISS AI SUPPORT",
             serverMessageId: -1,
           },
           forwardingScore: 999, // Score to indicate it has been forwarded
           externalAdReply: {
             title: "ᴊᴏᴇʟ xᴅ ʙᴏᴛ ᴠ ⁷",
             body: "ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʟᴏʀᴅ ᴊᴏᴇʟ",
-            thumbnailUrl: 'https://raw.githubusercontent.com/joeljamestech2/JOEL-XMD/refs/heads/main/mydata/media/joelXbot.jpg', // Add thumbnail URL if required
-            sourceUrl: 'https://whatsapp.com/channel/0029Vak2PevK0IBh2pKJPp2K', // Add source URL if necessary
+            thumbnailUrl: 'https://files.catbox.moe/gs8gi2.jpg', // Add thumbnail URL if required
+            sourceUrl: 'https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g', // Add source URL if necessary
             mediaType: 1,
             renderLargerThumbnail: true,
           },
