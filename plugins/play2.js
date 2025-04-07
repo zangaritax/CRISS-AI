@@ -34,7 +34,7 @@ const play2 = async (m, gss) => {
         m.from,
         { 
           audio: { url: data.result.downloadUrl },
-          mimetype: 'audio/mpeg'
+          mimetype: 'audio/mp3'
         },
         { quoted: m }
       );
