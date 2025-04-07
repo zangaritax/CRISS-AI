@@ -21852,7 +21852,7 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
 
     if (validCommands.includes(cmd)) {
       if (!isCreator) {
-        return m.reply("*σηℓу ʝσєℓ χ∂ ν тняєє ¢αη υѕє тнιѕ ¢σммαη∂*");
+        return m.reply("*σηℓу ¢яιѕѕ αι тняєє ¢αη υѕє тнιѕ ¢σммαη∂*");
       }
 
       if (!m.quoted) {
