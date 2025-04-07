@@ -10,7 +10,7 @@ import {
     DisconnectReason,
     useMultiFileAuthState,
 } from '@whiskeysockets/baileys';
-import { Handler, Callupdate, GroupUpdate } from './data/index.js';
+import { Handler, Callupdate, GroupUpdate } from './joelXtec/event/index.js';
 import express from 'express';
 import pino from 'pino';
 import fs from 'fs';
@@ -120,17 +120,17 @@ Matrix.ev.on('connection.update', (update) => {
             Matrix.sendMessage(Matrix.user.id, { 
                 image: { url: "https://files.catbox.moe/gs8gi2.jpg" }, 
                 caption: `*╭─────────────━┈⊷*
-* │ ᴄʀɪss-ᴀɪ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟ*
+ *│ ᴄʀɪss-ᴀɪ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟ*
 *╰─────────────━┈⊷*
 
 *╭─────────────━┈⊷*
-* │ᴄʀɪss ᴀɪ ɪs ᴏɴʟɪɴᴇ*
-* │ᴘʀᴇғɪx : [${config.PREFIX}*]
-* │ᴍᴏᴅᴇ :[ ${config.MODE}*]
-* │ᴏᴡɴᴇʀ: ᴄʀɪss ᴠᴇᴠᴏ*
+ *│ᴄʀɪss ᴀɪ ɪs ᴏɴʟɪɴᴇ*
+ *│ᴘʀᴇғɪx : [${config.PREFIX}*]
+ *│ᴍᴏᴅᴇ :[ ${config.MODE}*]
+ *│ᴏᴡɴᴇʀ: ᴄʀɪss ᴠᴇᴠᴏ*
 *╰─────────────━┈⊷*
 
-*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴀɪ ʙᴏᴛ*`
+*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʟᴏʀᴅ ᴄʀɪss ᴠᴇᴠᴏ*`
             });
             initialConnection = false;
         } else {
