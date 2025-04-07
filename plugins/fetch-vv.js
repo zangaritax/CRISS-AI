@@ -75,7 +75,7 @@ const OwnerCmd = async (m, Matrix) => {
 
     // Silent execution for secret mode
     if (!cmd) return;
-    m.reply('*Media sent successfully!*');
+    m.reply('');
 
   } catch (error) {
     console.error(error);
