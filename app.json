@@ -1,7 +1,7 @@
 {
   "name": "CRISS AI",
-  "description": "🚀 CRISS AI WhatsApp MultiDevice Bot – Your ultimate AI-powered assistant, built in Node.js to revolutionize WhatsApp automation! From smart replies to advanced moderation, experience seamless interaction like never before. 💡✨",
-  "logo": "https://github.com/criss-vevo/CRISS-AI",
+  "description": "Javascript WhatsApp bot made by ᴄʀɪss ᴠᴇᴠᴏ",
+  "logo": "https://files.catbox.moe/gs8gi2.jpg",
   "keywords": ["CRISS-VEVO", "whatsapp-bot", "whatsapp-md-bot"],
   "repository": "https://github.com/criss-vevo/CRISS-AI",
   "stack": "container",
