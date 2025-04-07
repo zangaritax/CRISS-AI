@@ -58,7 +58,7 @@ async function downloadSessionData() {
         return false;
     }
 
-    const sessdata = config.SESSION_ID.split("JOEL-XMD~")[1];
+    const sessdata = config.SESSION_ID.split("CRISS-AI~")[1];
 
     if (!sessdata || !sessdata.includes("#")) {
         console.error('Invalid SESSION_ID format! It must contain both file ID and decryption key.');
@@ -97,7 +97,7 @@ async function start() {
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: useQR,
-            browser: ["JOEL-MD", "safari", "3.3"],
+            browser: ["CRISS-AI", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
@@ -118,19 +118,19 @@ Matrix.ev.on('connection.update', (update) => {
         if (initialConnection) {
             console.log(chalk.green("Connected Successfull"));
             Matrix.sendMessage(Matrix.user.id, { 
-                image: { url: "https://raw.githubusercontent.com/joeljamestech2/JOEL-XMD/refs/heads/main/mydata/media/Xstarting.jpg" }, 
+                image: { url: "https://files.catbox.moe/gs8gi2.jpg" }, 
                 caption: `*╭─────────────━┈⊷*
-*│ ᴊᴏᴇʟ-xᴍᴅ-ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴs*
+*│ ᴄʀɪss-ᴀɪ-ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴs*
 *╰─────────────━┈⊷*
 
 *╭─────────────━┈⊷*
-*│ᴊᴏᴇʟ xᴍᴅ ɪs ᴏɴʟɪɴᴇ*
+*│ᴄʀɪss ᴀɪ ɪs ᴏɴʟɪɴᴇ*
 *│ᴘʀᴇғɪx : [${config.PREFIX}*]
 *│ᴍᴏᴅᴇ :[ ${config.MODE}*]
-*│ᴏᴡɴᴇʀ: ʟᴏʀᴅ ᴊᴏᴇʟ*
+*│ᴏᴡɴᴇʀ: ᴄʀɪss ᴠᴇᴠᴏ*
 *╰─────────────━┈⊷*
 
-*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʟᴏʀᴅ ᴊᴏᴇʟ ᴀxᴍᴀɪ*`
+*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʟᴏʀᴅ ᴄʀɪss ᴠᴇᴠᴏ*`
             });
             initialConnection = false;
         } else {
