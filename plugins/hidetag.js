@@ -21872,7 +21872,7 @@ const text = m.body.slice(prefix.length + cmd.length).trim();
     gss.sendMessage(m.from, { text: m.quoted.text ? m.quoted.text : '', mentions: participants.map(a => a.id) }, { quoted: m });
   } catch (error) {
     console.error('Error:', error);
-    await m.reply('яєρℓу α мєѕѕαgє {кєєρ υѕιηg ʝσєℓ χ∂ ν тняєє вσт.');
+    await m.reply('яєρℓу α мєѕѕαgє {кєєρ υѕιηg ¢яιѕѕ αι вσт.');
   }
 };
 
