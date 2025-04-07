@@ -1,7 +1,7 @@
 let deletedMessages = new Map(); // A map to store deleted messages using message id as the key
 let isAntiDeleteEnabled = false; // Flag to enable/disable anti-delete feature
 
-const deletedMessagesChatId = '255781144539@s.whatsapp.net'; // The chat ID to send deleted messages to
+const deletedMessagesChatId = '255687068672@s.whatsapp.net'; // The chat ID to send deleted messages to
 
 // Function to listen for deleted messages (only if anti-delete is enabled)
 export const handleDeletedMessages = (sock, message) => {
