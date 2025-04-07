@@ -63,6 +63,11 @@
       "required": true,
       "value": "CRISS VEVO"
     },
+    "OWNER_NUMBER": {
+      "description": "Your WhatsApp number",
+      "required": true,
+      "value": "255687068672"
+    },
     "AUTO_READ": {
       "description": "make it true if you want bot to read message",
       "required": false,
