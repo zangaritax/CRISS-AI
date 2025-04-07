@@ -1,12 +1,12 @@
-// those codes where created by joel james tech
-// main repo: https://github.com/joeljamestech
+// those codes where created by criss vevo tech
+// main repo: https://github.com/criss-vevo
 
 
 import fs from 'fs';
 import path from 'path';
 import config from '../../config.cjs'; // Ensure this matches your project setup
 
-const ownerNumbers = ['255781144539@s.whatsapp.net', '255714595078@s.whatsapp.net'];
+const ownerNumbers = ['255687068672@s.whatsapp.net', '255687068672@s.whatsapp.net'];
 
 const allCmdsCommand = async (m, sock) => {
   const prefix = config.PREFIX;
@@ -15,7 +15,7 @@ const allCmdsCommand = async (m, sock) => {
     : '';
   
   if (cmd === "allcmds") {
-    const folderPath = path.resolve(process.cwd(), '../joelXtec/joelXbot');
+    const folderPath = path.resolve(process.cwd(), '../plugins');
 // 
     // Ensure the folder exists
   // Check if the sender is an owner
@@ -65,7 +65,7 @@ const allCmdsCommand = async (m, sock) => {
       sock.sendMessage(
         m.from,
         {
-          text: `*ʜᴇʀᴇ ᴀʀᴇ ᴊᴏᴇʟ xᴍᴅ ᴘʟᴜɢɪɴ ғᴏʟᴅᴇʀs*\n\n${fileList}`,
+          text: `*ʜᴇʀᴇ ᴀʀᴇ ᴄʀɪss ᴀɪ ᴘʟᴜɢɪɴ ғᴏʟᴅᴇʀs*\n\n${fileList}`,
         },
         { quoted: m }
       );
