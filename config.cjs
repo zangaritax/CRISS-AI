@@ -40,7 +40,7 @@ const config = {
   NOT_ALLOW: process.env.NOT_ALLOW !== undefined ? process.env.NOT_ALLOW === 'true' : true,
   MODE: process.env.MODE || "public",
   DELETED_MESSAGES_CHAT_ID: process.env.DELETED_MESSAGES_CHAT_ID || "12345678901",
-  OWNER_NAME: process.env.OWNER_NAME || "ʟᴏʀᴅ ᴊᴏᴇʟ",
+  OWNER_NAME: process.env.OWNER_NAME || "ᴄʀɪss ᴠᴇᴠᴏ",
   /* ['255687068672@s.whatsapp.net', '255687068672@s.whatsapp.net']*/
   OWNER_NUMBER: process.env.OWNER_NUMBER || "255687068672",
   SUDO_NUMBER: process.env.SUDO_NUMBER || "255687068672",
