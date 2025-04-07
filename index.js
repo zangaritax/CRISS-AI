@@ -120,17 +120,17 @@ Matrix.ev.on('connection.update', (update) => {
             Matrix.sendMessage(Matrix.user.id, { 
                 image: { url: "https://files.catbox.moe/gs8gi2.jpg" }, 
                 caption: `*╭─────────────━┈⊷*
-*│ ᴄʀɪss-ᴀɪ-ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴs*
+* │ ᴄʀɪss-ᴀɪ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟ*
 *╰─────────────━┈⊷*
 
 *╭─────────────━┈⊷*
-*│ᴄʀɪss ᴀɪ ɪs ᴏɴʟɪɴᴇ*
-*│ᴘʀᴇғɪx : [${config.PREFIX}*]
-*│ᴍᴏᴅᴇ :[ ${config.MODE}*]
-*│ᴏᴡɴᴇʀ: ᴄʀɪss ᴠᴇᴠᴏ*
+* │ᴄʀɪss ᴀɪ ɪs ᴏɴʟɪɴᴇ*
+* │ᴘʀᴇғɪx : [${config.PREFIX}*]
+* │ᴍᴏᴅᴇ :[ ${config.MODE}*]
+* │ᴏᴡɴᴇʀ: ᴄʀɪss ᴠᴇᴠᴏ*
 *╰─────────────━┈⊷*
 
-*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʟᴏʀᴅ ᴄʀɪss ᴠᴇᴠᴏ*`
+*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴀɪ ʙᴏᴛ*`
             });
             initialConnection = false;
         } else {
