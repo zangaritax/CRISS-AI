@@ -13,6 +13,11 @@
       "required": true,
       "value": ""
     },
+      "STATUS_READ_MSG": {
+      "description": "Set the message bot sends after viewing a status",
+      "required": false,
+      "value": "*Status Seen*"
+    },
     "MODE": {
       "description": "mode public or self",
       "required": true,
@@ -53,7 +58,7 @@
       "required": false,
       "value": "255687068672"
     },
-        "OWNER_NAME": {
+    "OWNER_NAME": {
       "description": "Your name as the bot owner",
       "required": true,
       "value": "CRISS VEVO"
