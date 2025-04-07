@@ -31,7 +31,7 @@ const bibleCommand = async (m, Matrix) => {
       const language = data.translation_name;
 
       // Create the response message
-      const message = `*ᴊᴏᴇʟ xᴍᴅ ʙɪʙʟᴇ ᴍᴇɴᴜ*\n\n🔹 *We are reading:* ${data.reference}\n🔹 *Number of verses:* ${verses}\n\n *Now Read:*\n${contentText}\n\n*Translation:* ${language}\n\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴊᴏᴇʟ xᴍᴅ ʙᴏᴛ*`;
+      const message = `*ᴄʀɪss ᴀɪ ʙɪʙʟᴇ ᴍᴇɴᴜ*\n\n🔹 *We are reading:* ${data.reference}\n🔹 *Number of verses:* ${verses}\n\n *Now Read:*\n${contentText}\n\n*Translation:* ${language}\n\n*ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀᴏss ᴀɪ ʙᴏᴛ*`;
 
       // Send the response message
       await Matrix.sendMessage(m.from, { text: message }, { quoted: m });
