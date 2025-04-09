@@ -26,8 +26,11 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
- <a href="https://dashboard.heroku.com/new?template=https://criss-ai.vercel.app"><img title="DEPLOY-ON HEROKU" src="https://img.shields.io/badge/DEPLOY%20ON%20HEROKU-white" alt="Heroku" width="300"></a>
-
+<p align="center">
+  <a href="https://criss-ai.vercel.app" target="_blank">
+    <img alt="Deploy on Heroku" src="https://img.shields.io/badge/HEROKU-🚀 DEPLOY NOW 🚀-indigo?style=for-the-badge&logo=heroku&logoColor=white&labelColor=black"/>
+  </a>
+</p>
   
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
