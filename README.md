@@ -28,7 +28,7 @@
 
 <p align="center">
   <a href="https://criss-ai.vercel.app" target="_blank">
-    <img alt="Deploy on Heroku" src="https://img.shields.io/badge/HEROKU-🚀 DEPLOY NOW 🚀-indigo?style=for-the-badge&logo=heroku&logoColor=white&labelColor=black"/>
+    <img alt="DEPLOY-ON HEROKU" src="https://img.shields.io/badge/DEPLOY%20ON%20HEROKU-white" alt="Heroku" width="300"></a>"/>
   </a>
 </p>
   
