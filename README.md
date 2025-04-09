@@ -1,7 +1,7 @@
    𝗖𝗥𝗜𝗦𝗦 𝗔𝗜 𝗠𝗨𝗟𝗧𝗜 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 𝗕𝗢𝗧
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
-<p align="center">
+<p align="left">
   <a href="https://github.com/criss-vevo">
     <img alt="criss-vevo logo" height="300" width="300" src="https://files.catbox.moe/gs8gi2.jpg">
   </a>
