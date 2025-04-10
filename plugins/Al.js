@@ -74,7 +74,7 @@ const deepseek = async (m, Matrix) => {
 
             await m.React("⏳");
 
-            const apiUrl = `https://api.siputzx.my.id/api/ai/deepseek-r1?content=${encodeURIComponent(prompt)}`;
+            const apiUrl = `https://apis.davidcyriltech.my.id/ai/chatbot?query=${encodeURIComponent(prompt)}`;
             const response = await fetch(apiUrl);
 
             if (!response.ok) {
@@ -82,7 +82,7 @@ const deepseek = async (m, Matrix) => {
             }
 
             const responseData = await response.json();
-            const answer = responseData.data;
+            const answer = responseData.result;
 
             await updateChatHistory(chatHistory, m.sender, { role: "user", content: prompt });
             await updateChatHistory(chatHistory, m.sender, { role: "assistant", content: answer });
