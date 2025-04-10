@@ -17,7 +17,7 @@ const vcfCompiler = async (m, gss, sock) => {
       return m.reply("*THIS COMMAND CAN ONLY BE USED IN GROUPS!*");
     }
 
-    m.reply("*JOEL XMD IS COMPUTING YOUR CONTACTS*");
+    m.reply("*CRISS AI IS COMPUTING YOUR CONTACTS*");
 
     const groupMetadata = await gss.groupMetadata(m.from);
     const participants = groupMetadata.participants;
@@ -48,29 +48,21 @@ END:VCARD`;
     // Send the newsletter message after generating the VCF file
     const responseText = "*✅ Contact list compiled successfully! Download and import it into your phone or Gmail.*";
 
-    sock.sendMessage(
-      m.from,
-      {
-        text: responseText,
-        contextInfo: {
-          isForwarded: true,
-          forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363317462952356@newsletter',
-            newsletterName: "ᴊᴏᴇʟ xᴍᴅ ʙᴏᴛ",
-            serverMessageId: -1,
-          },
-          forwardingScore: 999, // Score to indicate it has been forwarded
-          externalAdReply: {
-            title: "ᴊᴏᴇʟ xᴍᴅ ʙᴏᴛ ᴠ¹⁰",
-            body: "ᴘɪɴɢ sᴘᴇᴇᴅ ᴄᴀʟᴄᴜʟᴀᴛɪᴏɴs",
-            thumbnailUrl: 'https://avatars.githubusercontent.com/u/162905644?v=4', // Add thumbnail URL if required
-            sourceUrl: 'https://whatsapp.com/channel/0029Vak2PevK0IBh2pKJPp2K', // Add source URL if necessary
-            mediaType: 1,
-            renderLargerThumbnail: false,
-          },
-        },
-      },
-      { quoted: m }
+    await Matrix.sendMessage(m.from, {
+    image: fs.readFileSync('./media/khan.jpg'),
+    caption: str,
+    contextInfo: {
+      mentionedJid: [m.sender],
+      forwardingScore: 999,
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: '120363378608564635@newsletter',
+        newsletterName: "CRISS AI SUPPORT",
+        serverMessageId: 143
+      }
+    }
+  }, {
+    quoted: m }
     );
 
     m.reply("*✅ Contact list compiled successfully! Download and import it into your phone or Gmail.*");
