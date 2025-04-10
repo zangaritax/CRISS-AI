@@ -47,6 +47,11 @@
       "required": false,
       "value": "true"
     },
+    "AUTOLIKE_EMOJI": {
+      "description": "Input your custom status like emoji else leave blank to use default => 💚",
+      "required": false,
+      "value": "💚"
+      },
     "AUTO_RECORDING": {
       "description": "Enable bot to show recording status (true/false)",
       "required": false,
