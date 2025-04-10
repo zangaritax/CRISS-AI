@@ -10,7 +10,7 @@ import {
     DisconnectReason,
     useMultiFileAuthState,
 } from '@whiskeysockets/baileys';
-import { Handler, Callupdate, GroupUpdate } from './data/index.js';
+import { Handler, Callupdate, GroupUpdate } from './joelXtec/event/index.js';
 import express from 'express';
 import pino from 'pino';
 import fs from 'fs';
@@ -58,7 +58,7 @@ async function downloadSessionData() {
         return false;
     }
 
-    const sessdata = config.SESSION_ID.split("Demo-Slayer~")[1];
+    const sessdata = config.SESSION_ID.split("CRISS-AI~")[1];
 
     if (!sessdata || !sessdata.includes("#")) {
         console.error('Invalid SESSION_ID format! It must contain both file ID and decryption key.');
@@ -120,7 +120,7 @@ Matrix.ev.on('connection.update', (update) => {
             Matrix.sendMessage(Matrix.user.id, { 
                 image: { url: "https://files.catbox.moe/gs8gi2.jpg" }, 
                 caption: `*╭─────────────━┈⊷*
- *│ ᴄʀɪss-ᴀɪ ᴄᴏɴɴᴇᴄᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟ*
+ *│ ᴄʀɪss-ᴀɪ-ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴs*
 *╰─────────────━┈⊷*
 
 *╭─────────────━┈⊷*
