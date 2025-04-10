@@ -42,6 +42,11 @@
       "required": false,
       "value": "false"
     },
+    "AUTOLIKE_STATUS": {
+      "description": "Make it true if you want bot to read and like status else leave blank",
+      "required": false,
+      "value": "true"
+    },
     "AUTO_RECORDING": {
       "description": "Enable bot to show recording status (true/false)",
       "required": false,
