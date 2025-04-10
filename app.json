@@ -87,6 +87,11 @@
       "required": false,
       "value": "*Status Seen*"
     },
+    "AUTO_BIO": {
+      "description": "make it true if you want the bot to update de bio after restart",
+      "required": false,
+      "value": "false"
+    },
     "AUTO_BLOCK": {
       "description": "Enable bot to auto-block specific numbers (true/false)",
       "required": false,
