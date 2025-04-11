@@ -66,7 +66,7 @@ const updateBio = async (Matrix) => {
 
   const randomQuote = getRandomQuote();
 
-  const newBio = `𝗖𝗥𝗜𝗦𝗦-𝗔𝗜 𝗕𝗢𝗧 𝗜𝗦 𝗢𝗡𝗟𝗜𝗡𝗘 24𝗛 ${uptime} | qυσтє: "${randomQuote}"`;
+  const newBio = `CRISS-AI BOT IS ONLINE 24H ${uptime} | qυσтє: "${randomQuote}"`;
 
   try {
 
