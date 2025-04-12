@@ -121,7 +121,7 @@ Matrix.ev.on('connection.update', (update) => {
         if (initialConnection) {
             console.log(chalk.green("Connected Successfull"));
             Matrix.sendMessage(Matrix.user.id, { 
-                image: { url: "https://files.catbox.moe/dbxr44.jpg" }, 
+                image: { url: "https://files.catbox.moe/b4khnd.jpg" }, 
                 caption: `*╭─────────────━┈⊷*
 *│ ᴄʀɪss-ᴀɪ-ɴᴏᴛɪғɪᴄᴀᴛɪᴏɴs*
 *╰─────────────━┈⊷*
