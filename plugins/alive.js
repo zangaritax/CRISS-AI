@@ -14,7 +14,7 @@ const alive = async (m, Matrix) => {
 
   if (!['alive', 'uptime', 'runtime'].includes(cmd)) return;
 
-  const str = `*🤖 Bot Status: Online*\n*⏳ Uptime: ${timeString}*`;
+  const str = `*🤖 CRISS-AI IS ONLINE*\n*⏳ Uptime: ${timeString}*`;
 
   await Matrix.sendMessage(m.from, {
     image: fs.readFileSync('./media/khan.jpg'),
