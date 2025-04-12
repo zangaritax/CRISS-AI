@@ -27,7 +27,7 @@ const config = {
   NOT_ALLOW: process.env.NOT_ALLOW !== undefined ? process.env.NOT_ALLOW === 'true' : false,
   MODE: process.env.MODE || "public",
   BOT_NAME: process.env.BOT_NAME || "𝗖𝗥𝗜𝗦𝗦 𝗔𝗜",
-  MENU_IMAGE: process.env.MENU_IMAGE || "https://files.catbox.moe/dbxr44.jpg",
+  MENU_IMAGE: process.env.MENU_IMAGE || "https://files.catbox.moe/b4khnd.jpg",
   DESCRIPTION: process.env.DESCRIPTION || "𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 𝗖𝗥𝗜𝗦𝗦 𝗩𝗘𝗩𝗢",
   OWNER_NAME: process.env.OWNER_NAME || "𝗖𝗥𝗜𝗦𝗦 𝗩𝗘𝗩𝗢",
   OWNER_NUMBER: process.env.OWNER_NUMBER || "255687068672",
