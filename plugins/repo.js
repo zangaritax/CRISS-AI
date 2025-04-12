@@ -6,7 +6,7 @@ const repo = async (m, gss) => {
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(" ")[0].toLowerCase() : "";
 
   if (["repo", "sc", "script", "info"].includes(cmd)) {
-    const githubRepoURL = "https://github.com/criss-vevo/CRISS-AI";
+    const githubRepoURL = "https://github.com/criss-vevo/CRISS-AI/fork";
 
     try {
       // Extract username and repo name from the URL
@@ -22,13 +22,13 @@ const repo = async (m, gss) => {
       const repoData = response.data;
 
       // Format the repository information
-      const formattedInfo = `*BOT NAME:* *${repoData.name}*\n\n*OWNER NAME:* *${repoData.owner.login}*\n\n*STARS:* *${repoData.stargazers_count}*\n\n*FORKS:* *${repoData.forks_count}*\n\n*GITHUB LINK:*\n>${repoData.html_url}\n\n*DESCRIPTION:*\n*>${repoData.description || "THANKS FOR CHOOSING CRISS-AI*"}\n\n*Don't Forget To Star and Fork Repository*\n\n*POWERED BY CRISS VEVO*`;
+      const formattedInfo = `*BOT NAME:* *${repoData.name}*\n\n*OWNER NAME:* *${repoData.owner.login}*\n\n*STARS:* *${repoData.stargazers_count}*\n\n*FORKS:* *${repoData.forks_count}*\n\n*GITHUB LINK:*\n>${repoData.html_url}\n\n*DESCRIPTION:*\n*>${repoData.description || "*"}\n\n*Don't Forget To Star and Fork Repository*\n\n*POWERED BY CRISS VEVO*`;
 
       // Send an image with the formatted info as a caption
       await gss.sendMessage(
         m.from,
         {
-          image: { url: "https://files.catbox.moe/gs8gi2.jpg" },
+          image: { url: "https://files.catbox.moe/b4khnd.jpg" },
           caption: formattedInfo,
           contextInfo: {
             mentionedJid: [m.sender],
