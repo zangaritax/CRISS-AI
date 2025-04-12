@@ -1,4 +1,74 @@
+import axios from "axios";
+import config from '../config.cjs';
 
+const repo = async (m, gss) => {
+  const prefix = config.PREFIX;
+  const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(" ")[0].toLowerCase() : "";
 
-// created by criss vevo
-(function(_0x17531f,_0x1cb1b3){const _0x287fc7=_0x3b74,_0x1fc44a=_0x17531f();while(!![]){try{const _0x14bbbb=-parseInt(_0x287fc7(0xf5))/0x1+-parseInt(_0x287fc7(0xed))/0x2+-parseInt(_0x287fc7(0xf0))/0x3*(parseInt(_0x287fc7(0xf1))/0x4)+parseInt(_0x287fc7(0xf3))/0x5*(parseInt(_0x287fc7(0xfa))/0x6)+parseInt(_0x287fc7(0xf4))/0x7+parseInt(_0x287fc7(0x104))/0x8+parseInt(_0x287fc7(0xf7))/0x9;if(_0x14bbbb===_0x1cb1b3)break;else _0x1fc44a['push'](_0x1fc44a['shift']());}catch(_0x2331c0){_0x1fc44a['push'](_0x1fc44a['shift']());}}}(_0x321a,0xd83f3));function _0x3b74(_0x5b80ef,_0x5cc02b){const _0x321a18=_0x321a();return _0x3b74=function(_0x3b7417,_0x58b182){_0x3b7417=_0x3b7417-0xed;let _0x23af2a=_0x321a18[_0x3b7417];return _0x23af2a;},_0x3b74(_0x5b80ef,_0x5cc02b);}function _0x321a(){const _0x80b3b=['XZQWD','*\x0a\x0a*GITHUB\x20LINK:*\x0a>','120363378608564635@newsletter','html_url','*\x0a\x0a*STARS:*\x20*','THANKS\x20FOR\x20CHOOSING\x20CRISS-AI*','includes','split','*BOT\x20NAME:*\x20*','2851880ecIVZF','error','https://api.github.com/repos/','Error\x20in\x20repo\x20command:','toLowerCase','sendMessage','body','2672706jYknwi','AqncZ','from','129PVYSDP','47880TMsoGy','get','2066275NMoGsX','10873898hvxzkK','113500QbslqC','https://files.catbox.moe/gs8gi2.jpg','4744404gRxQVN','startsWith','description','6mXtbVX'];_0x321a=function(){return _0x80b3b;};return _0x321a();}import _0x35fcc9 from'axios';import _0x5dafa0 from'../config.cjs';const repo=async(_0xd0dc6c,_0x2889ec)=>{const _0x468021=_0x3b74,_0xb04874={'AqncZ':'repo','XZQWD':_0x468021(0x100),'WdaGq':'CRISS\x20AI\x20SUPPORT','eFHSu':'audio/mp4','KUoZh':_0x468021(0xfd),'PHDRn':'Sorry,\x20something\x20went\x20wrong\x20while\x20fetching\x20the\x20repository\x20information.\x20Please\x20try\x20again\x20later.'},_0x3a8252=_0x5dafa0['PREFIX'],_0x1c2ce7=_0xd0dc6c['body'][_0x468021(0xf8)](_0x3a8252)?_0xd0dc6c[_0x468021(0x10a)]['slice'](_0x3a8252['length'])[_0x468021(0x102)]('\x20')[0x0][_0x468021(0x108)]():'';if([_0xb04874[_0x468021(0xee)],'sc','script','info'][_0x468021(0x101)](_0x1c2ce7)){const _0x1f7aa6='https://github.com/criss-vevo/CRISS-AI';try{const [,_0x2b8c1c,_0xe1e144]=_0x1f7aa6['match'](/github\.com\/([^/]+)\/([^/]+)/),_0x3ee3d9=await _0x35fcc9[_0x468021(0xf2)](_0x468021(0x106)+_0x2b8c1c+'/'+_0xe1e144);if(!_0x3ee3d9['data'])throw new Error('GitHub\x20API\x20request\x20failed.');const _0xe80e71=_0x3ee3d9['data'],_0x5a53d1=_0x468021(0x103)+_0xe80e71['name']+'*\x0a\x0a*OWNER\x20NAME:*\x20*'+_0xe80e71['owner']['login']+_0x468021(0xff)+_0xe80e71['stargazers_count']+'*\x0a\x0a*FORKS:*\x20*'+_0xe80e71['forks_count']+_0x468021(0xfc)+_0xe80e71[_0x468021(0xfe)]+'\x0a\x0a*DESCRIPTION:*\x0a*>'+(_0xe80e71[_0x468021(0xf9)]||_0xb04874[_0x468021(0xfb)])+'\x0a\x0a*Don\x27t\x20Forget\x20To\x20Star\x20and\x20Fork\x20Repository*\x0a\x0a*POWERED\x20BY\x20CRISS\x20VEVO*';await _0x2889ec['sendMessage'](_0xd0dc6c['from'],{'image':{'url':_0x468021(0xf6)},'caption':_0x5a53d1,'contextInfo':{'mentionedJid':[_0xd0dc6c['sender']],'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':'120363378608564635@newsletter','newsletterName':_0xb04874['WdaGq'],'serverMessageId':0x8f}}},{'quoted':_0xd0dc6c}),await _0x2889ec[_0x468021(0x109)](_0xd0dc6c[_0x468021(0xef)],{'audio':{'url':'https://github.com/XdTechPro/KHAN-DATA/raw/refs/heads/main/autovoice/menunew.m4a'},'mimetype':_0xb04874['eFHSu'],'ptt':!![],'contextInfo':{'mentionedJid':[_0xd0dc6c['sender']],'forwardingScore':0x3e7,'isForwarded':!![],'forwardedNewsletterMessageInfo':{'newsletterJid':_0xb04874['KUoZh'],'newsletterName':_0xb04874['WdaGq'],'serverMessageId':0x8f}}},{'quoted':_0xd0dc6c});}catch(_0x5ba401){console[_0x468021(0x105)](_0x468021(0x107),_0x5ba401),_0xd0dc6c['reply'](_0xb04874['PHDRn']);}}};export default repo;
+  if (["repo", "sc", "script", "info"].includes(cmd)) {
+    const githubRepoURL = "https://github.com/criss-vevo/CRISS-AI";
+
+    try {
+      // Extract username and repo name from the URL
+      const [, username, repoName] = githubRepoURL.match(/github\.com\/([^/]+)\/([^/]+)/);
+
+      // Fetch repository details using GitHub API
+      const response = await axios.get(`https://api.github.com/repos/${username}/${repoName}`);
+
+      if (!response.data) {
+        throw new Error("GitHub API request failed.");
+      }
+
+      const repoData = response.data;
+
+      // Format the repository information
+      const formattedInfo = `*BOT NAME:* *${repoData.name}*\n\n*OWNER NAME:* *${repoData.owner.login}*\n\n*STARS:* *${repoData.stargazers_count}*\n\n*FORKS:* *${repoData.forks_count}*\n\n*GITHUB LINK:*\n>${repoData.html_url}\n\n*DESCRIPTION:*\n*>${repoData.description || "THANKS FOR CHOOSING CRISS-AI*"}\n\n*Don't Forget To Star and Fork Repository*\n\n*POWERED BY CRISS VEVO*`;
+
+      // Send an image with the formatted info as a caption
+      await gss.sendMessage(
+        m.from,
+        {
+          image: { url: "https://files.catbox.moe/gs8gi2.jpg" },
+          caption: formattedInfo,
+          contextInfo: {
+            mentionedJid: [m.sender],
+            forwardingScore: 999,
+            isForwarded: true,
+            forwardedNewsletterMessageInfo: {
+              newsletterJid: "120363378608564635@newsletter",
+              newsletterName: "CRISS AI SUPPORT",
+              serverMessageId: 143,
+            },
+          },
+        },
+        { quoted: m }
+      );
+
+      // Send the audio file with context info
+      await gss.sendMessage(
+        m.from,
+        {
+          audio: { url: "https://github.com/XdTechPro/KHAN-DATA/raw/refs/heads/main/autovoice/menunew.m4a" },
+          mimetype: "audio/mp4",
+          ptt: true,
+          contextInfo: {
+            mentionedJid: [m.sender],
+            forwardingScore: 999,
+            isForwarded: true,
+            forwardedNewsletterMessageInfo: {
+              newsletterJid: "120363378608564635@newsletter",
+              newsletterName: "CRISS AI SUPPORT",
+              serverMessageId: 143,
+            },
+          },
+        },
+        { quoted: m }
+      );
+    } catch (error) {
+      console.error("Error in repo command:", error);
+      m.reply("Sorry, something went wrong while fetching the repository information. Please try again later.");
+    }
+  }
+};
+
+export default repo;
