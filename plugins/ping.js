@@ -26,16 +26,15 @@ const ping = async (m, Matrix) => {
     const text = `*CRISS-AI SPEED: ${responseTime.toFixed(2)}ms ${reactionEmoji}*`;
 
     await Matrix.sendMessage(m.from, {
-    image: fs.readFileSync('./media/khan.jpg'),
-    caption: str,
-    contextInfo: {
-      mentionedJid: [m.sender],
-      forwardingScore: 999,
-      isForwarded: true,
-      forwardedNewsletterMessageInfo: {
-        newsletterJid: '120363378608564635@newsletter',
-        newsletterName: "CRISS AI SUPPORT",
-        serverMessageId: 143
+      text,
+      contextInfo: {
+        mentionedJid: [m.sender],
+        forwardingScore: 999,
+        isForwarded: true,
+        forwardedNewsletterMessageInfo: {
+          newsletterJid: '120363378608564635@newsletter',
+          newsletterName: "CRISS AI SUPPORT",
+          serverMessageId: 143
         }
       }
     }, { quoted: m });
