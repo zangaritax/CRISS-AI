@@ -16,7 +16,7 @@ const Lyrics = async (m, Matrix) => {
 
     try {
       await m.React('🕘');
-      await m.reply('A moment, *ᴊᴏᴇʟ ᴍᴅ* is generating your lyrics request...');
+      await m.reply('A moment, *ᴄʀɪss ᴀɪ* is generating your lyrics request...');
 
       if (!text.includes('|')) {
         return m.reply('Please provide the song name and artist name separated by a "|", for example: Spectre|Alan Walker.');
