@@ -22,6 +22,11 @@
       "required": false,
       "value": "."
     },
+    "ANTI_DELETE": {
+      "description": "Enable anti-delete feature (true/false)",
+      "required": true,
+      "value": "true"
+    },
     "OWNER_NAME": {
       "description": "Your name as the bot owner",
       "required": true,
@@ -75,7 +80,7 @@
     "AUTO_BIO": {
       "description": "make it true if you want the bot to update de bio after restart",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     "AUTO_BLOCK": {
       "description": "Enable bot to auto-block specific numbers (true/false)",
