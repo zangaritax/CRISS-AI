@@ -33,7 +33,7 @@ async function uploadMedia(buffer) {
   const prefixMatch = m.body.match(/^[\\/!#.]/);
   const prefix = prefixMatch ? prefixMatch[0] : '/';
   const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
-  const validCommands = ['url', 'geturl', 'upload', 'u'];
+  const validCommands = ['url2', 'geturl3', 'upload2', 'u'];
 
   if (validCommands.includes(cmd)) {
     if (!m.quoted || !['imageMessage', 'videoMessage', 'audioMessage'].includes(m.quoted.mtype)) {
