@@ -5,12 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name  CRISS AI BOT",
-    "stop": "pm2 stop  CRISS AI BOT",
-    "restart": "pm2 restart  CRISS AI BOT"
+    "start": "pm2 start index.js --deep-monitoring --attach --name  CRISS-AI",
+    "stop": "pm2 stop  CRISS-AI",
+    "restart": "pm2 restart  CRISS-AI"
   },
-  "keywords": ["lord-joel", "whatsapp-bot", "whatsapp md bot"],
-  "author": " CRISS AI BOT",
+  "keywords": ["CRISS-AI", "whatsapp-bot", "whatsapp md bot"],
+  "author": " CRISS-VEVO",
   "license": "ISC",
   "dependencies": {
     "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.5.12",
