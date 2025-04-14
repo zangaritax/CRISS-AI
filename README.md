@@ -32,8 +32,10 @@
   
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?name=criss-ai&repository=criss-vevo%2FCRISS-AI&branch=main&builder=dockerfile&env%5BALWAYS_ONLINE%5D=false⁠&env%5BANTI_DELETE%5D=false&env%5BAUTO_BLOCK%5D=false&env%5BAUTO_REACT%5D=false&env%5BAUTO_READ%5D=false&env%5BAUTO_RECORDING%5D=false&env%5BAUTO_STATUS_REPLY%5D=false&env%5BAUTO_STATUS_SEEN%5D=true&env%5BAUTO_TYPING%5D=false&env%5BMODE%5D=public&env%5BOWNER_NAME%5D=CRISS_VEVO&env%5BOWNER_NUMBER%5D=255687068672&env%5BPREFIX%5D=.&env%5BREJECT_CALL%5D=false&env%5BSESSION_ID%5D=&env%5BSTATUS_READ_MSG%5D=*Your_Status_Seen_By_CRISS_AI*&ports=8000%3Bhttp%3B%2F">)
 
-  
+
+  <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 [![JOIN WHATSAPP GROUP](https://raw.githubusercontent.com/Neeraj-x0/Neeraj-x0/main/photos/suddidina-join-whatsapp.png)](https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g)
 
