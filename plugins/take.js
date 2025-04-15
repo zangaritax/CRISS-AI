@@ -33,5 +33,5 @@ const takeCommand = async (m, gss) => {
     }
   }
 };
-// codes by lord joel 
+// codes by lord criss 
 export default takeCommand;
