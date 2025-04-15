@@ -1,6 +1,6 @@
-name: CRISS-TECH 
+name: khan-md
 services:
-  - name: CRISS-TECH-SERVICE
+  - name: khan-md-service
     type: web
     ports:
       - 5000

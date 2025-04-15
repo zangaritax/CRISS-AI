@@ -1,110 +1,195 @@
 {
-  "name": "CRISS AI",
-  "description": "ᴀ ᴊᴀᴠᴀsᴄʀɪᴘᴛ ʙᴏᴛ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ",
-  "logo": "https://files.catbox.moe/b4khnd.jpg",
-  "keywords": ["CRISS-VEVO", "whatsapp-bot", "whatsapp-md-bot"],
-  "repository": "https://github.com/criss-vevo/CRISS-AI",
-  "stack": "container",
-  "env": { 
-  
+  "name": "CRISS-AI",
+  "description": "Javascript WhatsApp bot made by ᴄʀɪss ᴠᴇᴠᴏ",
+  "logo": "https://files.catbox.moe/37xk9g.jpg",
+  "keywords": ["CRISS-AI"],
+  "success_url": "/",
+
+    "stack": "container",
+  "env": {
     "SESSION_ID": {
-      "description": "Ensure your session Id starts with the word CRISS-AI~$",
+      "description": "Put the session-id here.",
       "required": true,
       "value": ""
-    },
-    "MODE": {
-      "description": "Set to 'public' or 'private' to define bot mode",
-      "required": true,
-      "value": "public"
-    },
+    },  
+    
+    "STICKER_NAME": {
+      "description": "type your sticker pack name.",
+      "required": false,
+      "value": "CRISS-AI"
+    }, 
+      
     "PREFIX": {
       "description": "paste your bot prefix note! Don't apply null prefix.",
       "required": false,
       "value": "."
     },
-    "ANTI_DELETE": {
-      "description": "Enable anti-delete feature (true/false)",
-      "required": true,
-      "value": "true"
-    },
-    "OWNER_NAME": {
-      "description": "Your name as the bot owner",
-      "required": true,
-      "value": "CRISS VEVO"
-    },
-    "OWNER_NUMBER": {
-      "description": "Your WhatsApp number",
-      "required": true,
-      "value": "255687068672"
-    },
-    "AUTO_READ": {
-      "description": "Enable bot to auto-read messages (true/false)",
+    
+    "MODE": {
+      "description": "select your bot work type public-private-inbox-group.",
       "required": false,
-      "value": "false"
+      "value": "public"
+      
     },
-    "AUTO_TYPING": {
-      "description": "Enable bot to show typing status (true/false)",
-      "required": false,
-      "value": "false"
-    },
-    "AUTO_RECORDING": {
-      "description": "Enable bot to show recording status (true/false)",
-      "required": false,
-      "value": "false"
-    },
+    
+    
     "ALWAYS_ONLINE": {
-      "description": "Keep bot always online (true/false)",
+      "description": "Make it true if want always online.",
+      "required": false,
+      "value": "false"  
+    },    
+  
+    "AUTO_VOICE": {
+      "description": "Make it true if want automatic voice reply .",
       "required": false,
       "value": "false"
-    },
-    "AUTO_REACT": {
-      "description": "Enable bot to auto-react to messages (true/false)",
+    }, 
+
+    "AUTO_REPLY": {
+      "description": "Make it true if you want automatic reply.",
       "required": false,
       "value": "false"
-    },
+    }, 
+
+    "AUTO_STICKER": {
+      "description": "Make it true if you want automatic sticker.",
+      "required": false,
+      "value": "false"
+    }, 
+
+
     "AUTO_STATUS_SEEN": {
-      "description": "Enable bot to view statuses (true/false)",
-      "required": false,
+      "description": "Make it true for automatic status seen.",
+      "required": true,
       "value": "true"
-    },
+    }, 
+
+    "AUTO_STATUS_REACT": {
+      "description": "make it true for automatic status reaction or like.",
+      "required": true,
+      "value": "true"
+    }, 
+
     "AUTO_STATUS_REPLY": {
-      "description": "Enable bot to reply after viewing a status (true/false)",
+      "description": "Make it true for auto reply msg on status seen.",
+      "required": true,
+      "value": "true"
+    }, 
+
+    "AUTO_STATUS_MSG": {
+      "description": "Type custom message on status reply",
+      "required": true,
+      "value": "*SEEN YOUR STATUS BY CRISS-AI 🖤*"
+   
+     }, 
+    
+    "OWNER_NAME": {
+      "description": "Type Bot Owner Name.",
+      "required": false,
+      "value": "ᴄʀɪss ᴠᴇᴠᴏ"
+}, 
+
+    "OWNER_NUMBER": {
+      "description": "put the owner number for bot.",
+      "required": false,
+      "value": "255687068672"
+
+    }, 
+
+    "BOT_NAME": {
+      "description": "Type here the bot name.",
+      "required": false,
+      "value": "CRISS-AI"
+
+      }, 
+
+    "ANTI_LINK": {
+      "description": "Make it true if you want bot auto remove group link.",
+      "required": true,
+      "value": "true"
+      
+    },
+    
+    "ANTI_BAD": {
+      "description": "Make it true if you want bot auto delete bad words.",
       "required": false,
       "value": "false"
     },
-    "STATUS_READ_MSG": {
-      "description": "Set the message bot sends after viewing a status",
+
+   "MENTION_REPLY": {
+      "description": "make it true if want mention reply if someone menetion you.",
       "required": false,
-      "value": "*Status Seen*"
+      "value": "false"
     },
-    "AUTO_BIO": {
-      "description": "make it true if you want the bot to update de bio after restart",
+    
+    "MENU_IMAGE_URL": {
+      "description": "add url for mention reply and menu if want.",
+      "required": false,
+      "value": "https://files.catbox.moe/37xk9g.jpg"
+    },
+    
+     "DESCRIPTION": {
+      "description": "add caption for menu and other",
+      "required": false,
+      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ*"
+    },
+
+      "DELETE_LINKS": {
+      "description": "remove links from group automatically without removing member",
       "required": false,
       "value": "true"
     },
-    "AUTO_BLOCK": {
-      "description": "Enable bot to auto-block specific numbers (true/false)",
+    
+    "AUTO_RECORDING": {
+      "description": "Make it true if you want auto recoding.",
       "required": false,
       "value": "false"
     },
-    "REJECT_CALL": {
-      "description": "Enable bot to reject incoming calls (true/false)",
+
+    "AUTO_TYPING": {
+      "description": "Make it true if you want auto typing.",
+      "required": false,
+      "value": "false"
+    },
+
+    "AUTO_REACT": {
+      "description": "Make it true if you want react on every message.",
+      "required": false,
+      "value": "false"
+    },
+    
+    "CUSTOM_REACT": {
+      "description": "Make it true if you want custom reactions.",
+      "required": false,
+      "value": "false"
+      
+    }, 
+    
+    "CUSTOM_REACT_EMOJIS": {
+      "description": "put here custom react react emojis.",
+      "required": false,
+      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+    }, 
+    
+    "ANTI_DEL_PATH": {
+      "description": "change it to -same- if you want to resend deleted message in same chat",
+      "required": false,
+      "value": "log"
+    }, 
+
+    "READ_MESSAGE": {
+      "description": "Make it true if you want bot read your all sms just now.",
       "required": false,
       "value": "false"
     }
-  },
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
-    }
-  ]
-  }
+
+},
+
+     "buildpacks": [
+        {
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+        }
+     ],
+  "stack": "heroku-24"
+}
+  

@@ -11,7 +11,7 @@ function cmd(info, func) {
     commands.push(data);
     return data;
 }
-module.import = {
+module.exports = {
     cmd,
     AddCommand:cmd,
     Function:cmd,

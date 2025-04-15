@@ -1,43 +1,13 @@
-   𝗖𝗥𝗜𝗦𝗦 𝗔𝗜 𝗠𝗨𝗟𝗧𝗜 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 𝗕𝗢𝗧
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+## CRISS VEVO
 
-<p align="left">
-  <a href="https://github.com/criss-vevo">
-    <img alt="criss-vevo logo"  src="https://files.catbox.moe/b4khnd.jpg">
-  </a>
+
+
+
+
+
+
+
+
+<p align="left">  
+<a href='https://dashboard.heroku.com/new?template=https://github.com/criss-vevo/CRISS-A1/tree/main' target="_blank"><img alt='Deploy on Heroku' src='https://img.shields.io/badge/Deploy%20on-Heroku-FF004D?style=for-the-badge&logo=heroku&logoColor=white'/></a>  
 </p>
-
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-
-
-#### SETUP 
-
-
-<p align="left">
-<a href="https://github.com/criss-vevo/CRISS-AI/fork"><img src="https://img.shields.io/badge/Fork-white" alt="𝐅𝐨𝐫𝐤" width="100"></a>
-
-
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-
- <p align="left">
-<a href="https://shorturl.at/UUWem"><img src="https://img.shields.io/badge/Pair%20session%20code-white" alt="𝐏𝐚𝐢𝐫 𝐬𝐞𝐬𝐬𝐢𝐨𝐧 𝐜𝐨𝐝𝐞" width="300"></a>
-
-
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-
-
-<p align="left">
-<a href="https://criss-ai.vercel.app" target="_blank"><img title="DEPLOY-ON HEROKU" src="https://img.shields.io/badge/DEPLOY%20ON%20HEROKU-white" alt="Heroku" width="300"></a>
-</p>
-  
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-
-[<img title="DEPLOY-ON KOYEB" src="https://img.shields.io/badge/DEPLOY%20ON%20KOYEB-white" alt="Heroku" width="300"></a>](https://criss-ai-xi.vercel.app )
-
-
-  <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-
-[![JOIN WHATSAPP GROUP](https://raw.githubusercontent.com/Neeraj-x0/Neeraj-x0/main/photos/suddidina-join-whatsapp.png)](https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g)
-
- 
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
