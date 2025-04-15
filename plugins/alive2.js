@@ -1,8 +1,7 @@
-const { cmd, commands } = require('../command');
-const os = require("os");
-const { runtime } = require('../lib/functions');
+import fs from 'fs';
+import config from '../config.cjs';
 
-cmd({
+const({
     pattern: "alive2",
     alias: ["status", "runtime", "uptime"],
     desc: "Check uptime and system status",
