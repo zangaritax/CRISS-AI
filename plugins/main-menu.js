@@ -352,7 +352,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363378608564635@newsletter',
-                        newsletterName:` CRISS AI SUPPORT,
+                        newsletterName: config.BOT_NAME,
                         serverMessageId: 143
                     }
                 }
