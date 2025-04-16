@@ -1,36 +1,38 @@
-const { cmd, commands } = require('../command');
+const { cmd } = require('../command');
 const os = require("os");
 const { runtime } = require('../lib/functions');
+const config = require('../config');
 
 cmd({
     pattern: "alive",
-    alias: ["status", "runtime", "uptime"],
-    desc: "Check uptime and system status",
+    alias: ["status", "online", "a"],
+    desc: "Check bot is alive or not",
     category: "main",
-    react: "📟",
+    react: "⚡",
     filename: __filename
 },
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+async (conn, mek, m, { from, sender, reply }) => {
     try {
-        // Generate system status message
-        const status = `╭━━〔 *CRISS-AI* 〕━━┈⊷
-┃◈╭─────────────·๏
-┃◈┃• *⏳Uptime*:  ${runtime(process.uptime())} 
-┃◈┃• *📟 Ram usage*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-┃◈┃• *⚙️ HostName*: ${os.hostname()}
-┃◈┃• *👨‍💻 Owner*: CRISS VEVO
-┃◈┃• *🧬 Version*: 3.0.0 BETA
-┃◈└───────────┈⊷
-╰──────────────┈⊷
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`;
+        const status = `
+╭───〔 *🤖 *${config.BOT_NAME}* STATUS* 〕───◉
+│✨ *Bot is Active & Online!*
+│
+│🧠 *Owner:* ${config.OWNER_NAME}
+│⚡ *Version:* 4.0.0
+│📝 *Prefix:* [${config.PREFIX}]
+│📳 *Mode:* [${config.MODE}]
+│💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
+│🖥️ *Host:* ${os.hostname()}
+│⌛ *Uptime:* ${runtime(process.uptime())}
+╰────────────────────◉
+> ${config.DESCRIPTION}`;
 
-        // Send the status message with an image
-        await conn.sendMessage(from, { 
-            image: { url: `https://files.catbox.moe/37xk9g.jpg` },  // Image URL
+        await conn.sendMessage(from, {
+            image: { url: config.MENU_IMAGE_URL },
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
-                forwardingScore: 999,
+                forwardingScore: 1000,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363378608564635@newsletter',
@@ -41,7 +43,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         }, { quoted: mek });
 
     } catch (e) {
-        console.error("Error in alive command:", e);
+        console.error("Alive Error:", e);
         reply(`An error occurred: ${e.message}`);
     }
 });
+
