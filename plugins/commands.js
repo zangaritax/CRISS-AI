@@ -1,91 +1,327 @@
 const config = require('../config')
-const { cmd, commands } = require('../command')
-const { runtime } = require('../lib/functions')
+const { cmd, commands } = require('../command');
 
 cmd({
     pattern: "list",
-    alias: ["listcmd", "commands"],
-    desc: "Show all available commands with descriptions",
+    alias: ["listcmd","commands"],
+    desc: "menu the bot",
     category: "menu",
-    react: "📜",
+    react: "⚡",
     filename: __filename
-}, async (conn, mek, m, { from, reply }) => {
+}, 
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        // Count total commands and aliases
-        const totalCommands = Object.keys(commands).length
-        let aliasCount = 0
-        Object.values(commands).forEach(cmd => {
-            if (cmd.alias) aliasCount += cmd.alias.length
-        })
+        let dec = `╭━❮ *DOWNLOAD CMD* ❯━┈⊷
+┃▸
+┃▸📄 COMMAND: .play
+┃▸❕ Download Audio from yt
+┃▸ 
+┃▸📄 COMMAND: .song
+┃▸❕ Download song from yt
+┃▸ 
+┃▸📄 COMMAND: .apk
+┃▸❕ Download apk from playstore
+┃▸ 
+┃▸📄 COMMAND: .video
+┃▸❕ Download video from yt
+┃▸ 
+┃▸📄 COMMAND: .fb
+┃▸❕ Download  video from fb
+┃▸ 
+┃▸📄 COMMAND: .tk
+┃▸❕ Download video from tiktok
+┃▸ 
+┃▸📄 COMMAND: .ig
+┃▸❕ Download video from ig
+┃▸ 
+┃▸📄 COMMAND: .gdrive
+┃▸❕ Download drive files
+┃▸ 
+┃▸📄 COMMAND: .twitter
+┃▸❕ Download video from Twitter
+┃▸
+┃▸📄 COMMAND: .img
+┃▸❕ Download image
+┃▸
+┃▸📄 COMMAND: .darama
+┃▸❕ Download full episode video
+┃▸
+┃▸📄 COMMAND: .play2
+┃▸❕ Download Audio from yt
+┃▸ 
+┃▸📄 COMMAND: .video2
+┃▸❕ Download video from yt
+┃▸ 
+┃▸📄 COMMAND: .baiscope
+┃▸❕ Download video from baiscope
+┃▸ 
+┃▸📄 COMMAND: .mfire
+┃▸❕ Download mediafire files
+╰━━━━━━━━━━━━⪼ 
 
-        // Get unique categories count
-        const categories = [...new Set(Object.values(commands).map(c => c.category))]
+╭━❮ *ANMIE CMD* ❯━┈⊷
+┃▸
+┃▸📄 COMMAND: .yts
+┃▸❕ Serch videos from yt
+┃▸
+┃▸📄 COMMAND: .king
+┃▸❕ get king about 
+┃▸
+┃▸📄 COMMAND: .dog
+┃▸❕ get random dog imgs
+┃▸
+┃▸📄 COMMAND: .anime 
+┃▸❕ get anime pics
+┃▸
+┃▸📄 COMMAND: .animegirl 
+┃▸❕ get animegirl pics
+┃▸
+┃▸📄 COMMAND: .loli
+┃▸❕ get romantic anime pics
+╰━━━━━━━━━━━━⪼  
 
-        let menuText = `╭───『 *${config.BOT_NAME} COMMAND LIST* 』───⳹
-│
-│ *🛠️ BOT INFORMATION*
-│ • 🤖 Bot Name: ${config.BOT_NAME}
-│ • 👑 Owner: ${config.OWNER_NAME}
-│ • ⚙️ Prefix: [${config.PREFIX}]
-│ • 🌐 Platform: Heroku
-│ • 📦 Version: 4.0.0
-│ • 🕒 Runtime: ${runtime(process.uptime())}
-│
-│ *📊 COMMAND STATS*
-│ • 📜 Total Commands: ${totalCommands}
-│ • 🔄 Total Aliases: ${aliasCount}
-│ • 🗂️ Categories: ${categories.length}
-│
-╰────────────────⳹\n`
+╭━❮‍ *INFO CMD* ❯━┈⊷
+┃▸
+┃▸📄 COMMAND: .alive
+┃▸❕ Check online or not
+┃▸  
+┃▸📄 COMMAND: .ping
+┃▸❕ Check bot speed
+┃▸  
+┃▸📄 COMMAND: .menu
+┃▸❕ Nero main menu
+┃▸
+┃▸📄 COMMAND: .menu2
+┃▸❕ Nero main menu2
+┃▸ 
+┃▸📄 COMMAND: .ai
+┃▸❕ chat with ai bot
+┃▸
+┃▸📄 COMMAND: .system
+┃▸❕ check bot systems
+┃▸
+┃▸📄 COMMAND: .owner
+┃▸❕ get owner info
+┃▸ 
+┃▸📄 COMMAND: .status
+┃▸❕ check bot runtime
+┃▸
+┃▸📄 COMMAND: .about 
+┃▸❕ get about bot 
+┃▸
+┃▸📄 COMMAND: .list 
+┃▸❕ get bot command list
+┃▸
+┃▸📄 COMMAND: .script 
+┃▸❕ get bot repository 
+╰━━━━━━━━━━━━⪼
 
-        // Organize commands by category
-        const categorized = {}
-        categories.forEach(cat => {
-            categorized[cat] = Object.values(commands).filter(c => c.category === cat)
-        })
+╭━❮ *OTHER CMD* ❯━┈⊷
+┃▸
+┃▸📄 COMMAND: .joke 
+┃▸❕ Get Rendom joke 
+┃▸ 
+┃▸📄 COMMAND: .fact
+┃▸❕ Get Rendom fact
+┃▸
+┃▸📄 COMMAND: .githubstalk 
+┃▸❕ Get github data any user
+┃▸ 
+┃▸📄 COMMAND: .gpass
+┃▸❕ Get a strong password 
+┃▸
+┃▸📄 COMMAND: .hack
+┃▸❕ prank with friends 
+┃▸
+┃▸📄 COMMAND: .srepo 
+┃▸❕ serch repository 
+┃▸
+┃▸📄 COMMAND: .define 
+┃▸❕ serch any words
+╰━━━━━━━━━━━━⪼
 
-        // Generate menu for each category
-        for (const [category, cmds] of Object.entries(categorized)) {
-            menuText += `╭───『 *${category.toUpperCase()}* 』───⳹
-│ • 📂 Commands: ${cmds.length}
-│ • 🔄 Aliases: ${cmds.reduce((a, c) => a + (c.alias ? c.alias.length : 0), 0)}
-│
-`
+╭━❮ *GROUP CMD* ❯━┈⊷
+┃▸
+┃▸📄 COMMAND: .mute
+┃▸❕ Mute group
+┃▸
+┃▸📄 COMMAND: .unmute
+┃▸❕ Unmute group
+┃▸
+┃▸📄 COMMAND: .left
+┃▸❕ left group
+┃▸
+┃▸📄 COMMAND: .jid
+┃▸❕ group jid
+┃▸
+┃▸📄 COMMAND: .remove
+┃▸❕ remove member from group
+┃▸
+┃▸📄 COMMAND: .delete 
+┃▸❕ remove sms from group 
+┃▸
+┃▸📄 COMMAND: .add
+┃▸❕ add members in group 
+┃▸
+┃▸📄 COMMAND: .kick
+┃▸❕ kick any user 
+┃▸
+┃▸📄 COMMAND: .kickall
+┃▸❕ remove all members from group
+┃▸
+┃▸📄 COMMAND: .setgoodbye
+┃▸❕ set member leave sms
+┃▸
+┃▸📄 COMMAND: .setwelcome 
+┃▸❕ set member welcome sms
+┃▸
+┃▸📄 COMMAND: promote 
+┃▸❕ make group admin
+┃▸
+┃▸📄 COMMAND: .demote 
+┃▸❕ dissmis any admin 
+┃▸
+┃▸📄 COMMAND: .tagall
+┃▸❕ mention group all members
+┃▸
+┃▸📄 COMMAND: .getpic
+┃▸❕ get group profile
+┃▸
+┃▸📄 COMMAND: .invite 
+┃▸❕ get group invite link
+┃▸
+┃▸📄 COMMAND: .revoke 
+┃▸❕ reset group link
+┃▸
+┃▸📄 COMMAND: .joinrequests
+┃▸❕ cheack group panding members
+┃▸
+┃▸📄 COMMAND: .allreq
+┃▸❕ add group panding members 
+┃▸
+┃▸📄 COMMAND: .lockgc
+┃▸❕ lock group private
+┃▸
+┃▸📄 COMMAND: .unlockgc
+┃▸❕ unlock group all
+┃▸
+┃▸📄 COMMAND: .leave 
+┃▸❕ left any group 
+┃▸
+┃▸📄 COMMAND: .updategname
+┃▸❕ set group name
+┃▸
+┃▸📄 COMMAND: .updategdesc
+┃▸❕ set group description 
+┃▸
+┃▸📄 COMMAND: .joim
+┃▸❕ join invite link 
+┃▸
+┃▸📄 COMMAND: .hidetag
+┃▸❕ mention any user hide
+┃▸
+┃▸📄 COMMAND: .ginfo
+┃▸❕ get group information 
+┃▸
+┃▸📄 COMMAND: .disappear on
+┃▸❕ on disappear sms in group 
+┃▸
+┃▸📄 COMMAND: .disappear off
+┃▸❕ off disappear sms in group 
+┃▸
+┃▸📄 COMMAND: .senddm
+┃▸❕ send disappear sms in group 
+┃▸
+┃▸📄 COMMAND: .disappear 7d 24h 90d
+┃▸❕ set time to disappear sms
+╰━━━━━━━━━━━━⪼
 
-            cmds.forEach(c => {
-                menuText += `┃▸📄 COMMAND: .${c.pattern}\n`
-                menuText += `┃▸❕ ${c.desc || 'No description available'}\n`
-                if (c.alias && c.alias.length > 0) {
-                    menuText += `┃▸🔹 Aliases: ${c.alias.map(a => `.${a}`).join(', ')}\n`
-                }
-                if (c.use) {
-                    menuText += `┃▸💡 Usage: ${c.use}\n`
-                }
-                menuText += `│\n`
-            })
-            
-            menuText += `╰────────────────⳹\n`
-        }
+╭━❮ *OWNER CMD* ❯━┈⊷
+┃▸
+┃▸📄 COMMAND: .update
+┃▸❕ update bot velue 
+┃▸
+┃▸📄 COMMAND: .restart 
+┃▸❕ restart your bot
+┃▸
+┃▸📄 COMMAND: .settings
+┃▸❕ see bot settings
+┃▸
+┃▸📄 COMMAND: .owner 
+┃▸❕ get owner number 
+┃▸
+┃▸📄 COMMAND: .repo 
+┃▸❕ get bot repository 
+┃▸
+┃▸📄 COMMAND: .system 
+┃▸❕ check bot systems
+┃▸
+┃▸📄 COMMAND: .block
+┃▸❕ block any user 
+┃▸
+┃▸📄 COMMAND: .unblock 
+┃▸❕ unblock any user 
+┃▸
+┃▸📄 COMMAND: .shutdown 
+┃▸❕ logout your bot
+┃▸
+┃▸📄 COMMAND: .clearchats 
+┃▸❕ clearchats from ib
+┃▸
+┃▸📄 COMMAND: .setpp
+┃▸❕ update profile pic
+┃▸
+┃▸📄 COMMAND: .broadcast 
+┃▸❕ creat broadcast 
+┃▸
+┃▸📄 COMMAND: .jid
+┃▸❕ get jid any user
+┃▸
+┃▸📄 COMMAND: .gjid 
+┃▸❕ get group jid
+╰━━━━━━━━━━━━⪼
 
-        menuText += `\n📝 *Note*: Use ${config.PREFIX}help <command> for detailed help\n`
-        menuText += `> ${config.DESCRIPTION}`
+╭━❮ *CONVERT CMD* ❯━┈⊷
+┃▸
+┃▸📄 COMMAND: .sticker
+┃▸❕ convert photo to sticker
+┃▸
+┃▸📄 COMMAND: .tts
+┃▸❕ change text to voice 
+┃▸
+┃▸📄 COMMAND: .trt 
+┃▸❕ change languages 
+╰━━━━━━━━━━━━⪼
+> ${config.DESCRIPTION}`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/37xk9g.jpg' },
-                caption: menuText,
+                image: { url: `https://files.catbox.moe/37xk9g.jpg` },
+                caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
-                    isForwarded: true
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363378608564635@newsletter',
+                        newsletterName: 'CRISS AI SUPPORT',
+                        serverMessageId: 143
+                    }
                 }
             },
             { quoted: mek }
-        )
+        );
 
+        // Send audio
+        await conn.sendMessage(from, {
+            audio: { url: 'https://github.com/XdTechPro/KHAN-DATA/raw/refs/heads/main/autovoice/menunew.m4a' },
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: mek });
+        
     } catch (e) {
-        console.error('Command List Error:', e)
-        reply(`❌ Error generating command list: ${e.message}`)
+        console.log(e);
+        reply(`${e}`);
     }
-})
+});
