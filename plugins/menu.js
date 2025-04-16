@@ -217,7 +217,7 @@ cmd({
 ┃★│ • blackbox [query]
 ┃★│ • luma [query]
 ┃★│ • dj [query]
-┃★│ • criss [query]
+┃★│ • khan [query]
 ┃★╰──────────────
 ╰━━━━━━━━━━━━━━━┈⊷
 > ${config.DESCRIPTION}`
