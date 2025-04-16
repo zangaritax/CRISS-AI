@@ -49,7 +49,7 @@ cmd({
             isForwarded: true,
             forwardedNewsletterMessageInfo: {
                 newsletterJid: '120363378608564635@newsletter',
-                newsletterName: config.BOT_NAME,
+                newsletterName: config.OWNER_NAME,
                 serverMessageId: 143
             }
         };
