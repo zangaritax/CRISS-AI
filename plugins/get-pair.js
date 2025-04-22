@@ -1,52 +1,89 @@
-//const fetch = require("node-fetch");
-const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, sleep, fetchJson} = require('../lib/functions')
-const { cmd } = require("../command");
-
-// get pair 2
+const { cmd, commands } = require('../command');
+const axios = require('axios');
 
 cmd({
     pattern: "pair",
     alias: ["getpair", "clonebot"],
     react: "✅",
-    desc: "Pairing code",
+    desc: "Get pairing code for CRISS-AI bot",
     category: "download",
     use: ".pair +255687068XXX",
     filename: __filename
-}, 
-async (conn, mek, m, { from, prefix, quoted, q, reply }) => {
+}, async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        // Helper function for delay
-        const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-        // Validate input
-        if (!q) {
-            return await reply("*Example -* .pair +255687068XXX");
+        // Extract phone number from command
+        const phoneNumber = q ? q.trim() : senderNumber;
+        
+        // Validate phone number format
+        if (!phoneNumber || !phoneNumber.match(/^\+?\d{10,15}$/)) {
+            return await reply("❌ Please provide a valid phone number with country code\nExample: .pair +255687068XXX");
         }
 
-        // Fetch pairing code
-        //const fetch = require("node-fetch");
-        const response = await fetch(`https://vevoai-2893708e008a.herokuapp.com/pair?phone=${q}`);
-        const pair = await response.json();
-
-        // Check for errors in response
-        if (!pair || !pair.code) {
-            return await reply("Failed to retrieve pairing code. Please check the phone number and try again.");
+        // Make API request to get pairing code
+        const response = await axios.get(`https://criss-ai.onrender.com/pair?phone=${encodeURIComponent(phoneNumber)}`);
+        
+        if (!response.data || !response.data.code) {
+            return await reply("❌ Failed to retrieve pairing code. Please try again later.");
         }
 
-        // Success response
-        const pairingCode = pair.code;
-        const doneMessage = "> *CRISS-AI PAIR COMPLETED*";
+        const pairingCode = response.data.code;
+        const doneMessage = "> *CRISS-AI PAIRING COMPLETED*";
 
-        // Send first message
+        // Send initial message with formatting
         await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
 
-        // Add a delay of 2 seconds before sending the second message
-        await sleep(2000);
+        // Add 2 second delay
+        await new Promise(resolve => setTimeout(resolve, 2000));
 
-        // Send second message with just the pairing code
+        // Send clean code message
         await reply(`${pairingCode}`);
+
     } catch (error) {
-        console.error(error);
-        await reply("An error occurred. Please try again later.");
+        console.error("Pair command error:", error);
+        await reply("❌ An error occurred while getting pairing code. Please try again later.");
+    }
+});
+
+
+cmd({
+    pattern: "pair2",
+    alias: ["getpair2", "clonebot2"],
+    react: "✅",
+    desc: "Get pairing code for KHAN-MD bot",
+    category: "download",
+    use: ".pair 255687068XXX",
+    filename: __filename
+}, async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+        // Extract phone number from command
+        const phoneNumber = q ? q.trim() : senderNumber;
+        
+        // Validate phone number format
+        if (!phoneNumber || !phoneNumber.match(/^\+?\d{10,15}$/)) {
+            return await reply("❌ Please provide a valid phone number with country code\nExample: .pair 255687068XXX");
+        }
+
+        // Make API request to get pairing code
+        const response = await axios.get(`https://criss-ai.onrender.com/pair?phone=${encodeURIComponent(phoneNumber)}`);
+        
+        if (!response.data || !response.data.code) {
+            return await reply("❌ Failed to retrieve pairing code. Please try again later.");
+        }
+
+        const pairingCode = response.data.code;
+        const doneMessage = "> *CRISS-AI PAIRING COMPLETED*";
+
+        // Send initial message with formatting
+        await reply(`${doneMessage}\n\n*Your pairing code is:* ${pairingCode}`);
+
+        // Add 2 second delay
+        await new Promise(resolve => setTimeout(resolve, 2000));
+
+        // Send clean code message
+        await reply(`${pairingCode}`);
+
+    } catch (error) {
+        console.error("Pair command error:", error);
+        await reply("❌ An error occurred while getting pairing code. Please try again later.");
     }
 });
