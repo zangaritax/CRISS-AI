@@ -1,27 +1,17 @@
 services:
   - type: web
-    name: criss-ai-bot
+    name: criss-ai
     env: node
-    plan: free
+    repo: https://github.com/criss-vevo/CRISS-AI
+    branch: main
     buildCommand: npm install
-    startCommand: npm start
-    autoDeploy: false
+    startCommand: node app.js  # badilisha kama entry point ni tofauti
     envVars:
-      - key: AUTO_STATUS_REACT
-        value: "true"
+      - key: APP_ENV
+        value: production
+      - key: SECRET_KEY
         sync: false
-      - key: AUTO_STATUS_SEEN
-        value: "true"
-        sync: false
-      - key: AUTO_TYPING
+      - key: DEBUG
         value: "false"
-        sync: false
-      - key: OWNER_NAME
-        value: "CRISS_VEVO"
-        sync: false
-      - key: OWNER_NUMBER
-        value: "255687068672"
-        sync: false
-      - key: SESSION_ID
-        value: ""
-        sync: false
+    plan: free
+    region: oregon
