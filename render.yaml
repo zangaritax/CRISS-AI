@@ -1,27 +1,27 @@
 services:
   - type: web
-    name: criss-ai
+    name: criss-ai-bot
     env: node
-    repo: https://github.com/criss-vevo/CRISS-AI
-    branch: main
-    buildCommand: npm install
-    startCommand: node index.js
-    envVars:
-      - key: APP_ENV
-        value: production
-      - key: SECRET_KEY
-        sync: false
-      - key: DEBUG
-        value: "false"
-      - key: PORT
-        value: 10000  # Render itapuuza hii na ku-overwrite na port yake, ila unaweza kuihifadhi
-      - key: API_KEY
-        sync: false
-      - key: BOT_NAME
-        value: Criss AI
-      - key: LANGUAGE
-        value: en
-      - key: VERSION
-        value: 1.0.0
     plan: free
-    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: false
+    envVars:
+      - key: AUTO_STATUS_REACT
+        value: "true"
+        generateValue: false
+      - key: AUTO_STATUS_SEEN
+        value: "true"
+        generateValue: false
+      - key: AUTO_TYPING
+        value: "false"
+        generateValue: false
+      - key: OWNER_NAME
+        value: "CRISS VEVO"
+        generateValue: false
+      - key: OWNER_NUMBER
+        value: "255687068672"
+        generateValue: false
+      - key: SESSION_ID
+        value: ""
+        generateValue: false
