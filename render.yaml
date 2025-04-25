@@ -9,13 +9,13 @@ services:
     envVars:
       - key: APP_ENV
         value: production
-      - key: SECRET_KEY
+      - key: SESSION_ID
         sync: false
       - key: DEBUG
         value: "false"
       - key: PORT
         value: 10000  # Render itapuuza hii na ku-overwrite na port yake, ila unaweza kuihifadhi
-      - key: API_KEY
+      - key: AUTO_TYPING
         sync: false
       - key: BOT_NAME
         value: Criss AI
