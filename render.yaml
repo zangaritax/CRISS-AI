@@ -8,6 +8,6 @@ services:
     branch: main
     envVars:
       - key: SESSION_ID
-        sync: "your-session-id-here"
+        sync: true
       - key: OWNER_NUMBER
-        sync: "your-owner-number-here"
+        sync: true
