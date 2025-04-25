@@ -1,17 +1,15 @@
+```yaml
 services:
   - type: web
-    name: criss-ai
+    name: CRISS-AI
     env: node
-    repo: https://github.com/criss-vevo/CRISS-AI
-    branch: main
-    buildCommand: npm install
-    startCommand: node app.js  # badilisha kama entry point ni tofauti
-    envVars:
-      - key: APP_ENV
-        value: production
-      - key: SECRET_KEY
-        sync: false
-      - key: DEBUG
-        value: "false"
     plan: free
-    region: oregon
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    branch: main
+    envVars:
+      - key: SESSION_ID
+        value: "your-session-id-here"
+      - key: OWNER_NUMBER
+        value: "your-owner-number-here"
+```
