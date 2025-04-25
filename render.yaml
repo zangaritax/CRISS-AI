@@ -8,6 +8,6 @@ services:
     autoDeploy: true
     envVars:
       - key: SESSION_ID
-        value: "your-session-id-here"
+        value: ""
       - key: AUTO_TYPING
-        value: "true"
+        value: true
