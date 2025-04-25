@@ -35,7 +35,6 @@
 
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/blueprint?repo=https://github.com/criss-vevo/CRISS-AI)
-  
 
 [![JOIN WHATSAPP GROUP](https://raw.githubusercontent.com/Neeraj-x0/Neeraj-x0/main/photos/suddidina-join-whatsapp.png)](https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g)
 
