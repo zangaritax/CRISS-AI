@@ -1,17 +1,18 @@
-FROM node:lts-buster
+# Base image
+FROM node:16
 
-# Set working directory inside container
-WORKDIR /app
+# Set working directory
+WORKDIR /usr/src/app
 
-# Copy package.json and install dependencies first (layer caching)
+# Copy package.json and install dependencies
 COPY package*.json ./
-RUN npm install -g pm2 && npm install
+RUN npm install
 
-# Copy the rest of the code
+# Copy application source code
 COPY . .
 
-# Expose the port your app runs on
-EXPOSE 9090
+# Expose the port the app runs on
+EXPOSE 3000
 
-# Start the app
+# Start the application
 CMD ["npm", "start"]
