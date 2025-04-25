@@ -1,18 +1,27 @@
 services:
   - type: web
     name: criss-ai
-    env: docker
-    plan: free
+    env: node
+    repo: https://github.com/criss-vevo/CRISS-AI
     branch: main
-    rootDir: .
-    dockerfilePath: Dockerfile
-    autoDeploy: true
+    buildCommand: npm install
+    startCommand: node index.js
     envVars:
-      - key: OWNER_NUMBER
-        value: ""
-      - key: SESSION_ID
-        value: ""
-      - key: MODE
-        value: ""
+      - key: APP_ENV
+        value: production
+      - key: SECRET_KEY
+        sync: false
+      - key: DEBUG
+        value: "false"
+      - key: PORT
+        value: 10000  # Render itapuuza hii na ku-overwrite na port yake, ila unaweza kuihifadhi
+      - key: API_KEY
+        sync: false
       - key: BOT_NAME
-        value: "CRISS-AI"
+        value: Criss AI
+      - key: LANGUAGE
+        value: en
+      - key: VERSION
+        value: 1.0.0
+    plan: free
+    region: oregon
