@@ -9,19 +9,19 @@ services:
     envVars:
       - key: AUTO_STATUS_REACT
         value: ""
-        generateValue: false
+        sync: false
       - key: AUTO_STATUS_SEEN
         value: ""
-        generateValue: false
+        sync: false
       - key: AUTO_TYPING
         value: ""
-        generateValue: false
+        sync: false
       - key: OWNER_NAME
         value: ""
-        generateValue: false
+        sync: false
       - key: OWNER_NUMBER
         value: ""
-        generateValue: false
+        sync: false
       - key: SESSION_ID
         value: ""
-        generateValue: false
+        sync: false
