@@ -8,19 +8,19 @@ services:
     autoDeploy: false
     envVars:
       - key: AUTO_STATUS_REACT
-        value: ""
+        value: "true"
         sync: false
       - key: AUTO_STATUS_SEEN
-        value: ""
+        value: "true"
         sync: false
       - key: AUTO_TYPING
-        value: ""
+        value: "false"
         sync: false
       - key: OWNER_NAME
-        value: ""
+        value: "CRISS_VEVO"
         sync: false
       - key: OWNER_NUMBER
-        value: ""
+        value: "255687068672"
         sync: false
       - key: SESSION_ID
         value: ""
