@@ -5,23 +5,9 @@ services:
     plan: free
     buildCommand: npm install
     startCommand: npm start
-    autoDeploy: false
+    autoDeploy: true
     envVars:
-      - key: AUTO_STATUS_REACT
-        value: ""
-        generateValue: false
-      - key: AUTO_STATUS_SEEN
-        value: ""
-        generateValue: false
-      - key: AUTO_TYPING
-        value: ""
-        generateValue: false
-      - key: OWNER_NAME
-        value: ""
-        generateValue: false
-      - key: OWNER_NUMBER
-        value: ""
-        generateValue: false
       - key: SESSION_ID
-        value: ""
-        generateValue: false
+        value: "your-session-id-here"
+      - key: AUTO_TYPING
+        value: "true"
