@@ -1,4 +1,3 @@
-```yaml
 services:
   - type: web
     name: CRISS-AI
@@ -12,4 +11,3 @@ services:
         value: "your-session-id-here"
       - key: OWNER_NUMBER
         value: "your-owner-number-here"
-```
