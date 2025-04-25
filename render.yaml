@@ -10,8 +10,6 @@ services:
       - key: APP_ENV
         value: production
       - key: SESSION_ID
-        sync: true
-      - key: AUTO_TYPING
         sync: false
       - key: PORT
         value: 10000  # 
