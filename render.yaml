@@ -1,7 +1,7 @@
 services:
   - type: web
     name: criss-ai
-    env: docker
+    env: .env
     plan: free
     branch: main
     rootDir: .
