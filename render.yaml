@@ -16,7 +16,7 @@ services:
       - key: PORT
         value: 10000 
       - key: MODE
-        sync: true
+        sync: false
       - key: BOT_NAME
         value: Criss AI
       - key: LANGUAGE
