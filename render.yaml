@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: criss-ai
+    env: docker
+    plan: free
+    branch: main
+    rootDir: .
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - Dockerfile
+        - .dockerignore
+        - src/**
+        - package.json
+        - package-lock.json
