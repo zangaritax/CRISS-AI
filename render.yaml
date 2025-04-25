@@ -1,13 +1,27 @@
 services:
   - type: web
-    name: CRISS-AI
+    name: criss-ai-bot
     env: node
     plan: free
-    buildCommand: "npm install"
-    startCommand: "npm start"
-    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: false
     envVars:
-      - key: SESSION_ID
-        value: true
+      - key: AUTO_STATUS_REACT
+        value: ""
+        generateValue: false
+      - key: AUTO_STATUS_SEEN
+        value: ""
+        generateValue: false
+      - key: AUTO_TYPING
+        value: ""
+        generateValue: false
+      - key: OWNER_NAME
+        value: ""
+        generateValue: false
       - key: OWNER_NUMBER
-        value: true
+        value: ""
+        generateValue: false
+      - key: SESSION_ID
+        value: ""
+        generateValue: false
