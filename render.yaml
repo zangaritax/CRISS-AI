@@ -7,10 +7,12 @@ services:
     rootDir: .
     dockerfilePath: Dockerfile
     autoDeploy: true
-    buildFilter:
-      paths:
-        - Dockerfile
-        - .dockerignore
-        - src/**
-        - package.json
-        - package-lock.json
+    envVars:
+      - key: OWNER_NUMBER
+        value: ""
+      - key: SESSION_ID
+        value: ""
+      - key: MODE
+        value: ""
+      - key: BOT_NAME
+        value: "CRISS-AI"
