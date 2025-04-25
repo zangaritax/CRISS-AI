@@ -10,11 +10,11 @@ services:
       - key: APP_ENV
         value: production
       - key: SESSION_ID
-        sync: true
+        sync: false
       - key: DEBUG
         value: "false"
       - key: PORT
-        value: 10000 
+        value: 10000  # 
       - key: OWNER_NUMBER
         sync: false
       - key: BOT_NAME
