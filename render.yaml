@@ -9,13 +9,13 @@ services:
     envVars:
       - key: APP_ENV
         value: production
-      - key: SECRET_KEY
-        sync: false
+      - key: SESSION_ID
+        sync: true
       - key: DEBUG
         value: "false"
       - key: PORT
         value: 10000 
-      - key: MODE
+      - key: OWNER_NUMBER
         sync: false
       - key: BOT_NAME
         value: Criss AI
