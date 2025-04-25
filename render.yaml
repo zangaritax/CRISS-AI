@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: criss-ai
+    name: CRISS-AI
     env: node
     repo: https://github.com/criss-vevo/CRISS-AI
     branch: main
