@@ -1,6 +1,6 @@
 {
   "name": "CRISS-AI",
-  "description": "Javascript WhatsApp bot made by Cʀɪss Vᴇᴠᴏ",
+  "description": "Javascript WhatsApp bot made by ᴄʀɪss ᴠᴇᴠᴏ",
   "logo": "https://files.catbox.moe/37xk9g.jpg",
   "keywords": ["CRISS-AI"],
   "success_url": "/",
@@ -144,7 +144,7 @@
       "DELETE_LINKS": {
       "description": "remove links from group automatically without removing member",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     
     "AUTO_RECORDING": {
@@ -183,6 +183,18 @@
       "required": false,
       "value": "log"
     }, 
+
+    "ADMIN_EVENTS": {
+      "description": "make it true if want know who promote or demote a member .",
+      "required": false,
+      "value": "false"
+    },
+
+    "WELCOME": {
+      "description": "make it true if want goodbye and welcome message in groups.",
+      "required": false,
+      "value": "false"
+    },
 
     "READ_MESSAGE": {
       "description": "Make it true if you want bot read your all sms just now.",
