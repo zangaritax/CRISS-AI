@@ -180,7 +180,7 @@ ${repoData.description || 'No description provided'}
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363378608564635@newsletter',
-                    newsletterName: config.OWNER_NAME || 'CRISS AI SUPPORT',
+                    newsletterName: config.OWNER_NAME || 'CRISS AI',
                     serverMessageId: 143
                 }
             }
