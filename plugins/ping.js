@@ -42,7 +42,7 @@ async (conn, mek, m, { from, quoted, sender, reply, }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363378608564635@newsletter',
-                    newsletterName: "CRISS AI SUPPORT",
+                    newsletterName: "CRISS AI",
                     serverMessageId: 143
                 }
             }
