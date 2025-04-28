@@ -12,6 +12,50 @@ const { writeFileSync } = require('fs');
 const path = require('path');
 
 cmd({
+    pattern: "admin-events",
+    alias: ["adminevents"],
+    desc: "Enable or disable admin event notifications",
+    category: "settings",
+    filename: __filename
+},
+async (conn, mek, m, { from, args, isCreator, reply }) => {
+    if (!isCreator) return reply("*📛 ᴏɴʟʏ ᴛʜᴇ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!*");
+
+    const status = args[0]?.toLowerCase();
+    if (status === "on") {
+        config.ADMIN_EVENTS = "true";
+        return reply("✅ Admin event notifications are now enabled.");
+    } else if (status === "off") {
+        config.ADMIN_EVENTS = "false";
+        return reply("❌ Admin event notifications are now disabled.");
+    } else {
+        return reply(`Example: .admin-events on`);
+    }
+});
+
+cmd({
+    pattern: "welcome",
+    alias: ["welcomeset"],
+    desc: "Enable or disable welcome messages for new members",
+    category: "settings",
+    filename: __filename
+},
+async (conn, mek, m, { from, args, isCreator, reply }) => {
+    if (!isCreator) return reply("*📛 ᴏɴʟʏ ᴛʜᴇ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ!*");
+
+    const status = args[0]?.toLowerCase();
+    if (status === "on") {
+        config.WELCOME = "true";
+        return reply("✅ Welcome messages are now enabled.");
+    } else if (status === "off") {
+        config.WELCOME = "false";
+        return reply("❌ Welcome messages are now disabled.");
+    } else {
+        return reply(`Example: .welcome on`);
+    }
+});
+
+cmd({
     pattern: "setprefix",
     alias: ["prefix"],
     react: "🔧",
