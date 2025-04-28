@@ -20,11 +20,11 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
  <p align="left">
-<a href="https://criss-ai.onrender.com"><img src="https://img.shields.io/badge/Pair%20session%20code-white" alt="𝐏𝐚𝐢𝐫 𝐬𝐞𝐬𝐬𝐢𝐨𝐧 01" width="300"></a>
+<a href="https://criss-ai.onrender.com"><img src="https://img.shields.io/badge/Pair%20session%2001-white" alt="𝐏𝐚𝐢𝐫 𝐬𝐞𝐬𝐬𝐢𝐨𝐧 01" width="300"></a>
 
 
  <p align="left">
-<a href="https://criss-ai-409f95bea707.herokuapp.com"><img src="https://img.shields.io/badge/Pair%20session%20code-white" alt="𝐏𝐚𝐢𝐫 𝐬𝐞𝐬𝐬𝐢𝐨𝐧 02" width="300"></a>
+<a href="https://criss-ai-409f95bea707.herokuapp.com"><img src="https://img.shields.io/badge/Pair%20session%2002-white" alt="𝐏𝐚𝐢𝐫 𝐬𝐞𝐬𝐬𝐢𝐨𝐧 02" width="300"></a>
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
