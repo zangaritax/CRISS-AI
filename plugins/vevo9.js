@@ -98,7 +98,7 @@ cmd({
 }, { quoted: mek });
 
         await conn.sendMessage(from, {
-            text,
+            audio,
             contextInfo: {
                 mentionedJid: [sender],
                 forwardingScore: 999,
@@ -110,6 +110,7 @@ cmd({
                 }
             }
         }, { quoted: mek });
+        
     } catch (error) {
         console.error(error);
         reply("An error occurred. Please try again.");
