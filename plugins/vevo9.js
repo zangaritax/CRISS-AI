@@ -85,14 +85,6 @@ cmd({
     fileName: `${song.title}.mp3`,
     contextInfo: {
         externalAdReply: {
-            title: song.title.length > 25 ? `${song.title.substring(0, 22)}...` : song.title,
-            body: "Join our WhatsApp Channel",
-            mediaType: 1,
-            thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
-            sourceUrl: 'https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g',
-            mediaUrl: 'https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g',
-            showAdAttribution: true,
-            renderLargerThumbnail: true,
             contextInfo: {
                 mentionedJid: [sender],
                 forwardingScore: 999,
@@ -105,20 +97,6 @@ cmd({
     }
 }, { quoted: mek });
 
-        await conn.sendMessage(from, {
-            audio,
-            contextInfo: {
-                mentionedJid: [sender],
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363378608564635@newsletter',
-                    newsletterName: "CRISS AI",
-                    serverMessageId: 143
-                }
-            }
-        }, { quoted: mek });
-        
     } catch (error) {
         console.error(error);
         reply("An error occurred. Please try again.");
