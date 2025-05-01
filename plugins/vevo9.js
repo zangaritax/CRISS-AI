@@ -92,7 +92,15 @@ cmd({
             sourceUrl: 'https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g',
             mediaUrl: 'https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g',
             showAdAttribution: true,
-            renderLargerThumbnail: true
+            renderLargerThumbnail: true,
+            contextInfo: {
+                mentionedJid: [sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363378608564635@newsletter',
+                    newsletterName: "CRISS AI",
+                    serverMessageId: 143
         }
     }
 }, { quoted: mek });
