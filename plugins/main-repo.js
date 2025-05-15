@@ -31,7 +31,7 @@ async (conn, mek, m, { from, reply }) => {
 
         // Send an image with the formatted info as a caption and context info
         await conn.sendMessage(from, {
-            image: { url: `https://files.catbox.moe/37xk9g.jpg` },
+            image: { url: `https://files.catbox.moe/j67u2n.jpg` },
             caption: formattedInfo,
             contextInfo: { 
                 mentionedJid: [m.sender],
@@ -56,7 +56,7 @@ async (conn, mek, m, { from, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363378608564635@newsletter',
-                    newsletterName: 'CRISS AI SUPPORT',
+                    newsletterName: 'CRISS AI',
                     serverMessageId: 143
                 }
             }
