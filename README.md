@@ -20,8 +20,10 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
+### USE QR TO GET SESSION
+
  <p align="left">
-<a href="https://criss-ai-409f95bea707.herokuapp.com"><img src="https://img.shields.io/badge/Pair%20session%20-white" alt="𝐏𝐚𝐢𝐫 𝐬𝐞𝐬𝐬𝐢𝐨𝐧 02" width="200"></a>
+<a href="https://criss-ai-409f95bea707.herokuapp.com"><img src="https://img.shields.io/badge/Pair%20session%20-white" alt=" 𝐬𝐞𝐬𝐬𝐢𝐨𝐧 02" width="200"></a>
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
