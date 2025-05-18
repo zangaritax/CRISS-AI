@@ -38,7 +38,7 @@ async (conn, mek, m, { from, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '0029VbAhCy8EquiTSb5pMS3t@newsletter',
+                    newsletterJid: '120363417599637828@newsletter',
                     newsletterName: 'CRISS AI',
                     serverMessageId: 143
                 }
@@ -55,7 +55,7 @@ async (conn, mek, m, { from, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '0029VbAhCy8EquiTSb5pMS3t@newsletter',
+                    newsletterJid: '120363417599637828@newsletter',
                     newsletterName: 'CRISS AI',
                     serverMessageId: 143
                 }
