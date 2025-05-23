@@ -59,15 +59,15 @@ ${translatedTafsirEnglish.text}`;
     await conn.sendMessage(
       from,
       {
-        image: { url: `https://files.catbox.moe/37xk9g.jpg` },
+        image: { url: `https://files.catbox.moe/4ggu0a.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363378608564635@newsletter',
-                        newsletterName: 'CRISS AI SUPPORT',
+                        newsletterJid: '120363417599637828@newsletter',
+                        newsletterName: 'CRISS AI',
                         serverMessageId: 143
           }
         }
@@ -449,15 +449,15 @@ async (conn, mek, m, { from, quoted, body,isCmd, command, args, q, isGroup, send
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/37xk9g.jpg` },
+                image: { url: `https://files.catbox.moe/4ggu0a.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363378608564635@newsletter',
-                        newsletterName: 'CRISS AI SUPPORT',
+                        newsletterJid: '120363417599637828@newsletter',
+                        newsletterName: 'CRISS AI',
                         serverMessageId: 143
                     }
                 }
