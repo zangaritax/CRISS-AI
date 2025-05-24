@@ -37,7 +37,7 @@ cmd({
                 from,
                 { 
                     image: { url: imageUrl },
-                    caption: `📷 Result for: ${query}\n> © Powered by CRISS AI`
+                    caption: `📷 Result for: ${query}\n> © Powered by CrissVevo`
                 },
                 { quoted: mek }
             );
