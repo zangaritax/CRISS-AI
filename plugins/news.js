@@ -5,7 +5,7 @@ cmd({
     pattern: "news",
     desc: "Get the latest news headlines.",
     category: "news",
-    react: "📰",
+    react: "🗞️",
     filename: __filename
 },
 async (conn, mek, m, { from, reply }) => {
