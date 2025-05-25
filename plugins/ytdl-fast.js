@@ -86,11 +86,11 @@ cmd({
     contextInfo: {
         externalAdReply: {
             title: song.title.length > 25 ? `${song.title.substring(0, 22)}...` : song.title,
-            body: "Join our WhatsApp Channel",
+            body: "Follow our WhatsApp Channel",
             mediaType: 1,
             thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
-            sourceUrl: 'https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g',
-            mediaUrl: 'https://whatsapp.com/channel/0029Vb0HIV2G3R3s2II4181g',
+            sourceUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
+            mediaUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
             showAdAttribution: true,
             renderLargerThumbnail: true
         }
