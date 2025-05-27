@@ -33,6 +33,10 @@
   
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
+<p align="left">
+<a href="https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2Fcriss-vevo%2FCRISS-AI" target="_blank"><img title="DEPLOY-ON RENDER" src="https://img.shields.io/badge/DEPLOY%20ON%20HEROKU-white" alt="Heroku" width="300"></a>
+</p>
+
 
 [![JOIN WHATSAPP GROUP](https://raw.githubusercontent.com/Neeraj-x0/Neeraj-x0/main/photos/suddidina-join-whatsapp.png)](https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t)
 
