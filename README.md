@@ -34,7 +34,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 <p align="left">
-<a href="https://dashboard.render.com/blueprint/new?repo=https%3A%2F%2Fgithub.com%2Fcriss-vevo%2FCRISS-AI" target="_blank"><img title="DEPLOY-ON RENDER" src="https://img.shields.io/badge/DEPLOY%20ON%20RENDER-white" alt="Heroku" width="300"></a>
+<a href="https://deploy-on-render-alpha.vercel.app" target="_blank"><img title="DEPLOY-ON RENDER" src="https://img.shields.io/badge/DEPLOY%20ON%20RENDER-white" alt="Heroku" width="300"></a>
 </p>
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
