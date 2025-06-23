@@ -48,11 +48,14 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
-<p>&nbsp;<img align="center" 
-| Statistic            |               Badge |
-|----------------------|---------------------|
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
-| **Version**          | <img src="https://img.shields.io/badge/Version-5.0.0-0D47A1?style=flat-square"> |
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=criss-vevo&show_icons=true&locale=en" alt="criss-vevo" /></p>
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=criss-vevo&" alt="criss-vevo" /></p>
+
+
 
 </div>
 
@@ -61,11 +64,4 @@
 > **Current Bot Version `5.0.0`**  
 
 ---
-
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=criss-vevo&show_icons=true&locale=en" alt="criss-vevo" /></p>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=criss-vevo&" alt="criss-vevo" /></p>
 
