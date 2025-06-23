@@ -48,7 +48,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
-| Statistic            |               Badge |
+<p>&nbsp;<img align="center" | Statistic            |               Badge |
 |----------------------|---------------------|
 | **Profile Views**    | <img src="https://komarev.com/ghpvc/?username=criss-vevo&label=Profile+Views&color=9D00FF&style=flat-square"> |
 | **Last Update**      | <img src="https://img.shields.io/github/last-commit/criss-vevo/CRISS-AI?color=9D00FF&label=Last+Update&style=flat-square"> |
