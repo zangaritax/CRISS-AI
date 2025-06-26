@@ -21,7 +21,6 @@ cmd({
         
         let yts = yt.results[0];  
         let apiUrl = [ 
-            `https://apis.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(yts.url)}`,
             `https://xploader-api.vercel.app/ytmp3?url=${videoUrl}`,
             `https://apis.davidcyriltech.my.id/youtube/mp3?url=${videoUrl}`,
             `https://api.ryzendesu.vip/api/downloader/ytmp3?url=${videoUrl}`,
@@ -79,7 +78,6 @@ cmd({
 
         const song = yt.results[0];
         const apiUrl =  [ 
-            `https://apis.davidcyriltech.my.id/youtube/mp3?url=${encodeURIComponent(song.url)}`,
             `https://xploader-api.vercel.app/ytmp3?url=${videoUrl}`,
             `https://apis.davidcyriltech.my.id/youtube/mp3?url=${videoUrl}`,
             `https://api.ryzendesu.vip/api/downloader/ytmp3?url=${videoUrl}`,
