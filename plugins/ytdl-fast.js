@@ -106,9 +106,3 @@ cmd({
         }
     }
 }, { quoted: mek });
-
-    } catch (error) {
-        console.error(error);
-        reply("An error occurred. Please try again.");
-    }
-});
