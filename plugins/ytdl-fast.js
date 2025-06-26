@@ -20,12 +20,7 @@ cmd({
         if (yt.results.length < 1) return reply("No results found!");
         
         let yts = yt.results[0];  
-        let apiUrl = [ 
-            `https://xploader-api.vercel.app/ytmp3?url=${videoUrl}`,
-            `https://apis.davidcyriltech.my.id/youtube/mp3?url=${videoUrl}`,
-            `https://api.ryzendesu.vip/api/downloader/ytmp3?url=${videoUrl}`,
-            `https://api.dreaded.site/api/ytdl/audio?url=${videoUrl}` 
-];
+        let apiUrl = `https://apis.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(yts.url)}`;
         
         let response = await fetch(apiUrl);
         let data = await response.json();
@@ -77,12 +72,7 @@ cmd({
         if (!yt.results.length) return reply("No results found!");
 
         const song = yt.results[0];
-        const apiUrl =  [ 
-            `https://xploader-api.vercel.app/ytmp3?url=${videoUrl}`,
-            `https://apis.davidcyriltech.my.id/youtube/mp3?url=${videoUrl}`,
-            `https://api.ryzendesu.vip/api/downloader/ytmp3?url=${videoUrl}`,
-            `https://api.dreaded.site/api/ytdl/audio?url=${videoUrl}` 
-];
+        const apiUrl = `https://apis.davidcyriltech.my.id/youtube/mp3?url=${encodeURIComponent(song.url)}`;
         
         const res = await fetch(apiUrl);
         const data = await res.json();
@@ -106,3 +96,9 @@ cmd({
         }
     }
 }, { quoted: mek });
+
+    } catch (error) {
+        console.error(error);
+        reply("An error occurred. Please try again.");
+    }
+});
