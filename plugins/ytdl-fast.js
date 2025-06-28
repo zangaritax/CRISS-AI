@@ -29,7 +29,7 @@ cmd({
             return reply("Failed to fetch the video. Please try again later.");
         }
 
-        let ytmsg = `🎬 *Video Downloader*
+        let ytmsg = `📹 *Video Downloader*
 🎬 *Title:* ${yts.title}
 ⏳ *Duration:* ${yts.timestamp}
 👀 *Views:* ${yts.views}
@@ -72,7 +72,7 @@ cmd({
         if (!yt.results.length) return reply("No results found!");
 
         const song = yt.results[0];
-        const apiUrl = `https://api.ryzendesu.vip/api/downloader/ytmp3?url=${encodeURIComponent(song.url)}`;
+        const apiUrl = `https://apis.davidcyriltech.my.id/youtube/mp3?url=${encodeURIComponent(song.url)}`;
         
         const res = await fetch(apiUrl);
         const data = await res.json();
