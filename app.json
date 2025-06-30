@@ -14,12 +14,6 @@
       "required": true,
       "value": ""
     },  
-    
-    "STICKER_NAME": {
-      "description": "type your sticker pack name.",
-      "required": false,
-      "value": "CRISS-AI"
-    }, 
       
     "PREFIX": {
       "description": "paste your bot prefix note! Don't apply null prefix.",
@@ -27,38 +21,11 @@
       "value": "."
     },
     
-    "MODE": {
-      "description": "select your bot work type public-private-inbox-group.",
-      "required": false,
-      "value": "public"
-      
-    },
-    
-    
     "ALWAYS_ONLINE": {
       "description": "Make it true if want always online.",
       "required": false,
       "value": "false"  
     },    
-  
-    "AUTO_VOICE": {
-      "description": "Make it true if want automatic voice reply .",
-      "required": false,
-      "value": "false"
-    }, 
-
-    "AUTO_REPLY": {
-      "description": "Make it true if you want automatic reply.",
-      "required": false,
-      "value": "false"
-    }, 
-
-    "AUTO_STICKER": {
-      "description": "Make it true if you want automatic sticker.",
-      "required": false,
-      "value": "false"
-    }, 
-
 
     "AUTO_STATUS_SEEN": {
       "description": "Make it true for automatic status seen.",
@@ -118,12 +85,6 @@
       "value": "false"
       
     },
-    
-    "ANTI_BAD": {
-      "description": "Make it true if you want bot auto delete bad words.",
-      "required": false,
-      "value": "false"
-    },
 
    "MENTION_REPLY": {
       "description": "make it true if want mention reply if someone menetion you.",
@@ -167,30 +128,11 @@
       "value": "false"
     },
     
-    "CUSTOM_REACT": {
-      "description": "Make it true if you want custom reactions.",
-      "required": false,
-      "value": "false"
-      
-    }, 
-    
-    "CUSTOM_REACT_EMOJIS": {
-      "description": "put here custom react react emojis.",
-      "required": false,
-      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
-    }, 
-    
     "ANTI_DEL_PATH": {
       "description": "change it to -same- if you want to resend deleted message in same chat",
       "required": false,
       "value": "log"
     }, 
-
-    "ADMIN_EVENTS": {
-      "description": "make it true if want know who promote or demote a member .",
-      "required": false,
-      "value": "false"
-    },
 
     "WELCOME": {
       "description": "make it true if want goodbye and welcome message in groups.",
