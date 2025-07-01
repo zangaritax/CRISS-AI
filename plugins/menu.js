@@ -18,13 +18,13 @@ cmd({
 
         const menuCaption = `╭━━━〔 *${config.BOT_NAME}* 〕━━━┈⊷
 ┃★╭──────────────
-┃★│ 👑 Owner : *${config.OWNER_NAME}*
-┃★│ 🤖 Baileys : *Multi Device*
-┃★│ 💻 Type : *NodeJs*
-┃★│ 🚀 Platform : *Heroku*
-┃★│ ⚙️ Mode : *[${config.MODE}]*
-┃★│ 🔣 Prefix : *[${config.PREFIX}]*
-┃★│ 🏷️ Version : *3.0.0 Bᴇᴛᴀ*
+┃★│ 👑 *Owner :* ${config.OWNER_NAME}
+┃★│ 🤖 *Baileys :* Multi Device
+┃★│ 💻 *Type :* NodeJs
+┃★│ 🚀 *Platform :* vercel
+┃★│ ⚙️ *Mode :* [${config.MODE}]
+┃★│ 🔣 *Prefix :* [${config.PREFIX}]
+┃★│ 🏷️ *Version :* 5.0.0 Pro
 ┃★╰──────────────
 ╰━━━━━━━━━━━━━━━┈⊷
 ╭━━〔 *Menu List* 〕━━┈⊷
