@@ -17,11 +17,11 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     try {
         let dec = `╭━━〔 🚀 *${config.BOT_NAME}* 〕━━┈⊷
 ┃◈╭─────────────────·๏
-┃◈┃• 👑 Owner : *${config.OWNER_NAME}*
-┃◈┃• ⚙️ Prefix : *[${config.PREFIX}]*
-┃◈┃• 🌐 Platform : *Heroku*
-┃◈┃• 📦 Version : *4.0.0*
-┃◈┃• ⏱️ Runtime : *${runtime(process.uptime())}*
+┃◈┃• 👑 Owner : ${config.OWNER_NAME}
+┃◈┃• ⚙️ Prefix : [${config.PREFIX}]
+┃◈┃• 🌐 Platform : vercel
+┃◈┃• 📦 Version : 5.0.0 Pro
+┃◈┃• ⏱️ Runtime : ${runtime(process.uptime())}
 ┃◈╰─────────────────┈⊷
 ╰━━━━━━━━━━━━━━━━━━━┈⊷
 
