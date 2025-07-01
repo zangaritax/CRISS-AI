@@ -17,8 +17,8 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
         const dec = `╭━━━〔 *${config.BOT_NAME} Main Menu* 〕━━━╮
 ┃ ✨ *Owner:* ${config.OWNER_NAME}
 ┃ ⚙️ *Mode:* ${config.MODE}
-┃ 📡 *Platform:* Heroku
-┃ 🧠 *Type:* NodeJs (Multi Device)
+┃ 📡 *Platform:* vercel
+┃ 🧠 *Type:* Node.Js (Multi Device)
 ┃ ⌨️ *Prefix:* ${config.PREFIX}
 ┃ 🧾 *Version:* 5.0.0 Pro
 ╰━━━━━━━━━━━━━━━━━━━━━━━━╯
