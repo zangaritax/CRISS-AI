@@ -80,20 +80,18 @@ cmd({
 
         if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
 
-        // Optional: get thumbnail as buffer for audio thumb (uncomment if needed)
-        let jpegThumbnail = null;
-        try {
-            if (song.thumbnail) {
-                jpegThumbnail = await (await fetch(song.thumbnail)).buffer();
-            }
-        } catch {}
+        // 1. Tuma picha (thumbnail) ikiwa na caption ya jina la nyimbo na msanii
+        let imgUrl = song.thumbnail || "https://i.ibb.co/7yz1C9S/music-note.png"; // fallback image
+        await conn.sendMessage(from, {
+            image: { url: imgUrl },
+            caption: `🎵 *${song.title}*\n👤 *${song.author?.name || "Unknown"}*`
+        }, { quoted: mek });
 
-        // Send audio with WhatsApp Newsletter forwarding context and caption (name + artist)
+        // 2. Tuma audio chini yake na forwarding context ya newsletter
         await conn.sendMessage(from, {
             audio: { url: data.result.downloadUrl },
             mimetype: "audio/mpeg",
             fileName: `${song.title}.mp3`,
-            caption: `🎵 *${song.title}*\n👤 *${song.author?.name || "Unknown"}*`,
             contextInfo: { 
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
@@ -102,8 +100,7 @@ cmd({
                     newsletterJid: '120363417599637828@newsletter',
                     newsletterName: 'CRISS AI',
                     serverMessageId: 143
-                },
-                ...(jpegThumbnail ? { jpegThumbnail } : {})
+                }
             }
         }, { quoted: mek });
 
