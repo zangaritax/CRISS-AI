@@ -17,7 +17,7 @@ cmd({
     try { 
         if (!q) return await reply("Please provide a YouTube URL or video name.");
 
-        // Reply haraka kwamba inatafuta video
+        // Fast reply: searching for video
         await reply("🔍 ᴄʀɪss ᴀɪ is searching for your video...");
 
         const yt = await ytsearch(q);
@@ -37,7 +37,7 @@ cmd({
 🎬 *Title:* ${yts.title}
 ✅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`;
 
-        // Send video directly with caption and forwarding context
+        // Send video with caption and forwarding context
         await conn.sendMessage(
             from, 
             { 
@@ -78,7 +78,7 @@ cmd({
     try {
         if (!q) return reply("Please provide a song name or YouTube link.");
 
-        // Reply haraka kwamba inatafuta nyimbo
+        // Fast reply: searching for song
         await reply("🔍 ᴄʀɪss ᴀɪ is searching for your song...");
 
         const yt = await ytsearch(q);
@@ -92,11 +92,11 @@ cmd({
 
         if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
 
-        // 1. Tuma picha (thumbnail) ikiwa na caption ya jina la nyimbo na msanii, NA forwarding ya newsletter
+        // 1. Send image (thumbnail) with song title and powered by text, with forwarding context
         let imgUrl = song.thumbnail || "https://i.ibb.co/7yz1C9S/music-note.png"; // fallback image
         await conn.sendMessage(from, {
             image: { url: imgUrl },
-            caption: `🎵 *${song.title}* \n\n✅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`,
+            caption: `🎵 *${song.title}*\n\n✅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`,
             contextInfo: { 
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
@@ -109,7 +109,7 @@ cmd({
             }
         }, { quoted: mek });
 
-        // 2. Tuma audio chini yake na forwarding context ya newsletter
+        // 2. Send audio with forwarding context
         await conn.sendMessage(from, {
             audio: { url: data.result.downloadUrl },
             mimetype: "audio/mpeg",
