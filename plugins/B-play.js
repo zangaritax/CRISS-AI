@@ -84,7 +84,7 @@ cmd({
         let imgUrl = song.thumbnail || "https://i.ibb.co/7yz1C9S/music-note.png"; // fallback image
         await conn.sendMessage(from, {
             image: { url: imgUrl },
-            caption: `🎵 *${song.title}*\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`,
+            caption: `🎵 *${song.title}*\n\n✅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`,
             contextInfo: { 
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
