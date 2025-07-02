@@ -1,6 +1,7 @@
 const config = require('../config');
 const { cmd } = require('../command');
 const { ytsearch } = require('@dark-yasiya/yt-dl.js');
+const fetch = require('node-fetch');
 
 // MP4 video download
 
@@ -79,16 +80,20 @@ cmd({
 
         if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
 
-        // 1. Tuma jina la nyimbo na msanii kwanza (option/message)
-        await conn.sendMessage(from, {
-            text: `🎵 *${song.title}*\n👤 *${song.author.name}*`,
-        }, { quoted: mek });
+        // Optional: get thumbnail as buffer for audio thumb (uncomment if needed)
+        let jpegThumbnail = null;
+        try {
+            if (song.thumbnail) {
+                jpegThumbnail = await (await fetch(song.thumbnail)).buffer();
+            }
+        } catch {}
 
-        // 2. Tuma audio yenye forwarding context info ya newsletter
+        // Send audio with WhatsApp Newsletter forwarding context and caption (name + artist)
         await conn.sendMessage(from, {
             audio: { url: data.result.downloadUrl },
             mimetype: "audio/mpeg",
             fileName: `${song.title}.mp3`,
+            caption: `🎵 *${song.title}*\n👤 *${song.author?.name || "Unknown"}*`,
             contextInfo: { 
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
@@ -97,7 +102,8 @@ cmd({
                     newsletterJid: '120363417599637828@newsletter',
                     newsletterName: 'CRISS AI',
                     serverMessageId: 143
-                }
+                },
+                ...(jpegThumbnail ? { jpegThumbnail } : {})
             }
         }, { quoted: mek });
 
