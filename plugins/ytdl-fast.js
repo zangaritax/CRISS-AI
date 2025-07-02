@@ -1,6 +1,7 @@
 const config = require('../config');
 const { cmd } = require('../command');
 const { ytsearch } = require('@dark-yasiya/yt-dl.js');
+const fetch = require('node-fetch');
 
 // MP4 video download
 
@@ -15,7 +16,10 @@ cmd({
 }, async (conn, mek, m, { from, prefix, quoted, q, reply }) => { 
     try { 
         if (!q) return await reply("Please provide a YouTube URL or video name.");
-        
+
+        // Reply haraka kwamba inatafuta video
+        await reply("🔍 ᴄʀɪss ᴀɪ is searching for your video...");
+
         const yt = await ytsearch(q);
         if (yt.results.length < 1) return reply("No results found!");
         
@@ -29,21 +33,27 @@ cmd({
             return reply("Failed to fetch the video. Please try again later.");
         }
 
-        let ytmsg = `📹 *Video Downloader*
+        let ytmsg = `
 🎬 *Title:* ${yts.title}
-⏳ *Duration:* ${yts.timestamp}
-👀 *Views:* ${yts.views}
-👤 *Author:* ${yts.author.name}
-🔗 *Link:* ${yts.url}
-> Powered By CRISS AI ❤️`;
+✅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`;
 
-        // Send video directly with caption
+        // Send video directly with caption and forwarding context
         await conn.sendMessage(
             from, 
             { 
                 video: { url: data.result.download_url }, 
                 caption: ytmsg,
-                mimetype: "video/mp4"
+                mimetype: "video/mp4",
+                contextInfo: { 
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363417599637828@newsletter',
+                        newsletterName: 'CRISS AI',
+                        serverMessageId: 143
+                    }
+                }
             }, 
             { quoted: mek }
         );
@@ -68,6 +78,9 @@ cmd({
     try {
         if (!q) return reply("Please provide a song name or YouTube link.");
 
+        // Reply haraka kwamba inatafuta nyimbo
+        await reply("🔍 ᴄʀɪss ᴀɪ is searching for your song...");
+
         const yt = await ytsearch(q);
         if (!yt.results.length) return reply("No results found!");
 
@@ -79,23 +92,39 @@ cmd({
 
         if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
 
-    await conn.sendMessage(from, {
-    audio: { url: data.result.downloadUrl },
-    mimetype: "audio/mpeg",
-    fileName: `${song.title}.mp3`,
-    contextInfo: {
-        externalAdReply: {
-            title: song.title.length > 25 ? `${song.title.substring(0, 22)}...` : song.title,
-            body: "Follow our WhatsApp Channel",
-            mediaType: 1,
-            thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
-            sourceUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
-            mediaUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
-            showAdAttribution: true,
-            renderLargerThumbnail: true
-        }
-    }
-}, { quoted: mek });
+        // 1. Tuma picha (thumbnail) ikiwa na caption ya jina la nyimbo na msanii, NA forwarding ya newsletter
+        let imgUrl = song.thumbnail || "https://i.ibb.co/7yz1C9S/music-note.png"; // fallback image
+        await conn.sendMessage(from, {
+            image: { url: imgUrl },
+            caption: `🎵 *${song.title}* \n\n✅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363417599637828@newsletter',
+                    newsletterName: 'CRISS AI',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+
+        // 2. Tuma audio chini yake na forwarding context ya newsletter
+        await conn.sendMessage(from, {
+            audio: { url: data.result.downloadUrl },
+            mimetype: "audio/mpeg",
+            fileName: `${song.title}.mp3`,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363417599637828@newsletter',
+                    newsletterName: 'CRISS AI',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
 
     } catch (error) {
         console.error(error);
