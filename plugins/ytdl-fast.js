@@ -17,8 +17,8 @@ cmd({
     try { 
         if (!q) return await reply("Please provide a YouTube URL or video name.");
 
-        // Fast reply: searching for video
-        await reply("🔍 ᴄʀɪss ᴀɪ is searching for your video...");
+        // Fast reply: searching for video (do NOT await so it replies instantly)
+        conn.sendMessage(from, { text: "🔍 ᴄʀɪss ᴀɪ is searching for your video..." }, { quoted: mek });
 
         const yt = await ytsearch(q);
         if (yt.results.length < 1) return reply("No results found!");
@@ -78,8 +78,8 @@ cmd({
     try {
         if (!q) return reply("Please provide a song name or YouTube link.");
 
-        // Fast reply: searching for song
-        await reply("🔍 ᴄʀɪss ᴀɪ is searching for your song...");
+        // Fast reply: searching for song (do NOT await so it replies instantly)
+        conn.sendMessage(from, { text: "🔍 ᴄʀɪss ᴀɪ is searching for your song..." }, { quoted: mek });
 
         const yt = await ytsearch(q);
         if (!yt.results.length) return reply("No results found!");
