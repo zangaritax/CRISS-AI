@@ -80,11 +80,21 @@ cmd({
 
         if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
 
-        // 1. Tuma picha (thumbnail) ikiwa na caption ya jina la nyimbo na msanii
+        // 1. Tuma picha (thumbnail) ikiwa na caption ya jina la nyimbo na msanii, NA forwarding ya newsletter
         let imgUrl = song.thumbnail || "https://i.ibb.co/7yz1C9S/music-note.png"; // fallback image
         await conn.sendMessage(from, {
             image: { url: imgUrl },
-            caption: `🎵 *${song.title}*\n👤 *${song.author?.name || "Unknown"}*`
+            caption: `🎵 *${song.title}*\n\nᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`,
+            contextInfo: { 
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363417599637828@newsletter',
+                    newsletterName: 'CRISS AI',
+                    serverMessageId: 143
+                }
+            }
         }, { quoted: mek });
 
         // 2. Tuma audio chini yake na forwarding context ya newsletter
