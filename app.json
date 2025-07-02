@@ -13,24 +13,6 @@
       "description": "Put the session-id here.",
       "required": true,
       "value": ""
-    },  
-
-    "AUTO_STATUS_SEEN": {
-      "description": "Make it true for automatic status seen.",
-      "required": false,
-      "value": "true"
-    }, 
-
-    "AUTO_STATUS_REACT": {
-      "description": "make it true for automatic status reaction or like.",
-      "required": false,
-      "value": "true"
-    }, 
-
-    "AUTO_TYPING": {
-      "description": "Make it true if you want auto typing.",
-      "required": false,
-      "value": "false"
 
     }
 
