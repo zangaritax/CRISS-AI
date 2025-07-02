@@ -1,10 +1,8 @@
 const { cmd } = require('../command');
 const axios = require('axios');
 
-// Store chatbot status per chat
 const chatbotStates = {};
 
-// Your OpenAI API key (inserted directly, as requested)
 const OPENAI_API_KEY = "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";
 
 async function askOpenAI(question) {
@@ -21,32 +19,28 @@ async function askOpenAI(question) {
         ],
         max_tokens: 400
     };
-
     try {
         const response = await axios.post(url, data, { headers });
-        const answer = response.data.choices[0].message.content.trim();
-        return answer;
+        return response.data.choices[0].message.content.trim();
     } catch (error) {
         console.error("OpenAI error:", error.response?.data || error.message);
         return "Samahani, kuna tatizo na huduma ya AI kwa sasa!";
     }
 }
 
-// Command to enable/disable chatbot
+// Enable/disable command
 cmd({
     pattern: "chatbot",
-    desc: "Enable or disable the chatbot for this chat.",
+    desc: "Washa au zima chatbot kwenye chat hii.",
     category: "ai",
     react: "🤖",
     filename: __filename,
     use: ".chatbot on/off"
-},
-async (conn, m, store, { from, reply, args }) => {
+}, async (conn, m, store, { from, reply, args }) => {
     const subcmd = args[0]?.toLowerCase();
     if (!subcmd) {
         return reply("Tumia `.chatbot on` kuwasha au `.chatbot off` kuzima chatbot kwenye chat hii.");
     }
-
     if (subcmd === "on") {
         chatbotStates[from] = true;
         return reply("✅ Chatbot imewashwa! Tuma ujumbe wowote na nitakujibu moja kwa moja kwa Kiswahili.");
@@ -58,13 +52,18 @@ async (conn, m, store, { from, reply, args }) => {
     }
 });
 
-// Message handler to auto-reply using OpenAI when chatbot is enabled
-const { registerMessageHandler } = require('../command');
-
-registerMessageHandler(async (conn, m, store, { from, reply, body, isCmd }) => {
-    if (isCmd || !chatbotStates[from]) return;
-
-    // Call OpenAI to get a Swahili answer
+// Catch-all handler (must be LAST!)
+// Matches any message, but only replies if chatbot is ON and message is NOT a command
+cmd({
+    pattern: /[\s\S]*/,
+    dontAddCommandList: true,
+    dontShowCommand: true,
+    react: false,
+    category: "ai",
+    filename: __filename
+}, async (conn, m, store, { from, reply, body, isCmd }) => {
+    if (isCmd) return;
+    if (!chatbotStates[from]) return;
     const aiResponse = await askOpenAI(body);
     await reply(aiResponse);
 });
