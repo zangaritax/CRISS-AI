@@ -57,7 +57,7 @@ cmd({
         const sentMsg = await conn.sendMessage(
             from,
             {
-                image: { url: config.MENU_IMAGE_URL || 'https://res.cloudinary.com/dgy2dutjs/image/upload/v1751628385/url.crissvevo.co.tz/IMG_2356_gfzval.jpg' },
+                image: { url: config.MENU_IMAGE_URL || 'https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg' },
                 caption: menuCaption,
                 contextInfo: contextInfo
             },
@@ -375,7 +375,7 @@ cmd({
                     await conn.sendMessage(
                         senderID,
                         {
-                            image: { url: config.MENU_IMAGE_URL || 'https://res.cloudinary.com/dgy2dutjs/image/upload/v1751628385/url.crissvevo.co.tz/IMG_2356_gfzval.jpg' },
+                            image: { url: config.MENU_IMAGE_URL || 'https://res.cloudinary.com/dgy2dutjs/image/upload/v1751624587/url.crissvevo.co.tz/IMG_2353_fze42l.jpg' },
                             caption: selectedMenu.content,
                             contextInfo: contextInfo
                         },
