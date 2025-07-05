@@ -1,1 +1,0 @@
-consot: ping from aliossz
