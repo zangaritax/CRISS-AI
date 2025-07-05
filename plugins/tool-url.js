@@ -9,7 +9,7 @@ cmd({
   pattern: "tourl",
   alias: ["imgtourl", "imgurl", "url", "geturl", "upload"],
   react: '🖇',
-  desc: "Convert media to URL (uses GoFile.io API)",
+  desc: "Convert media to URL (uses pixeldrain.com API)",
   category: "utility",
   use: ".tourl [reply to media]",
   filename: __filename
@@ -33,19 +33,17 @@ cmd({
     form.append('file', fs.createReadStream(tempFile), `file${ext}`);
 
     const resp = await axios.post(
-      "https://api.gofile.io/uploadFile",
+      "https://pixeldrain.com/api/file",
       form,
       { headers: form.getHeaders() }
     );
 
     fs.unlinkSync(tempFile);
 
-    // GoFile.io success response
-    if (!resp.data || !resp.data.data || !resp.data.data.downloadPage)
+    if (!resp.data || !resp.data.id)
       throw "Error obtaining uploaded URL";
 
-    const mediaUrl = resp.data.data.downloadPage;
-
+    const mediaUrl = `https://pixeldrain.com/u/${resp.data.id}`;
     let mediaType = 'File';
     if (mimeType.includes('image')) mediaType = 'Image';
     else if (mimeType.includes('video')) mediaType = 'Video';
@@ -64,7 +62,6 @@ cmd({
   }
 });
 
-// Helper function
 function formatBytes(bytes) {
   if (bytes === 0) return '0 Bytes';
   const k = 1024;
