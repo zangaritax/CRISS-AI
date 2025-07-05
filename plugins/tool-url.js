@@ -7,9 +7,9 @@ const { cmd } = require("../command");
 
 cmd({
   pattern: "tourl",
-  alias: ["imgtourl","imgurl","url","geturl","upload"],
+  alias: ["imgtourl", "imgurl", "url", "geturl", "upload"],
   react: '🖇',
-  desc: "Convert media to URL (uses anonfiles API)",
+  desc: "Convert media to URL (uses GoFile.io API)",
   category: "utility",
   use: ".tourl [reply to media]",
   filename: __filename
@@ -33,15 +33,18 @@ cmd({
     form.append('file', fs.createReadStream(tempFile), `file${ext}`);
 
     const resp = await axios.post(
-      "https://api.anonfiles.com/upload",
+      "https://api.gofile.io/uploadFile",
       form,
       { headers: form.getHeaders() }
     );
 
     fs.unlinkSync(tempFile);
 
-    const mediaUrl = resp.data.data.file.url.full;
-    if (!mediaUrl) throw "Error obtaining uploaded URL";
+    // GoFile.io success response
+    if (!resp.data || !resp.data.data || !resp.data.data.downloadPage)
+      throw "Error obtaining uploaded URL";
+
+    const mediaUrl = resp.data.data.downloadPage;
 
     let mediaType = 'File';
     if (mimeType.includes('image')) mediaType = 'Image';
@@ -61,11 +64,11 @@ cmd({
   }
 });
 
-// Helper
+// Helper function
 function formatBytes(bytes) {
   if (bytes === 0) return '0 Bytes';
   const k = 1024;
-  const sizes = ['Bytes','KB','MB','GB'];
+  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
 }
