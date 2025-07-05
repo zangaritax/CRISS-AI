@@ -9,7 +9,7 @@ cmd({
   pattern: "tourl",
   alias: ["imgtourl","imgurl","url","geturl","upload"],
   react: '🖇',
-  desc: "Convert media to custom URL (uses your Vercel API)",
+  desc: "Convert media to URL (uses file.io API)",
   category: "utility",
   use: ".tourl [reply to media]",
   filename: __filename
@@ -30,18 +30,17 @@ cmd({
     else if (mimeType.includes('audio')) ext = '.mp3';
 
     const form = new FormData();
-    form.append('fileToUpload', fs.createReadStream(tempFile), `file${ext}`);
+    form.append('file', fs.createReadStream(tempFile), `file${ext}`);
 
-    // Tunatumia API yako badala ya Catbox
     const resp = await axios.post(
-      "https://criss-ai-urls.vercel.app/api/upload",
+      "https://file.io",
       form,
       { headers: form.getHeaders() }
     );
 
     fs.unlinkSync(tempFile);
 
-    const mediaUrl = resp.data.url;
+    const mediaUrl = resp.data.link;
     if (!mediaUrl) throw "Error obtaining uploaded URL";
 
     let mediaType = 'File';
@@ -53,7 +52,7 @@ cmd({
       `*${mediaType} Uploaded Successfully*\n\n` +
       `*Size:* ${formatBytes(mediaBuffer.length)}\n` +
       `*URL:* ${mediaUrl}\n\n` +
-      `> © Uploaded by CRISS AI 💜`
+      `> Uploaded by CRISS AI 💜`
     );
 
   } catch (error) {
