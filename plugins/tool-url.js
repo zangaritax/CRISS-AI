@@ -9,7 +9,7 @@ cmd({
   pattern: "tourl",
   alias: ["imgtourl","imgurl","url","geturl","upload"],
   react: '🖇',
-  desc: "Convert media to URL (uses file.io API)",
+  desc: "Convert media to URL (uses anonfiles API)",
   category: "utility",
   use: ".tourl [reply to media]",
   filename: __filename
@@ -33,15 +33,14 @@ cmd({
     form.append('file', fs.createReadStream(tempFile), `file${ext}`);
 
     const resp = await axios.post(
-      "https://file.io",
+      "https://api.anonfiles.com/upload",
       form,
       { headers: form.getHeaders() }
     );
 
     fs.unlinkSync(tempFile);
 
-    // Use resp.data.link directly!
-    const mediaUrl = resp.data.link;
+    const mediaUrl = resp.data.data.file.url.full;
     if (!mediaUrl) throw "Error obtaining uploaded URL";
 
     let mediaType = 'File';
