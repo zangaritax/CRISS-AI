@@ -38,6 +38,9 @@ cmd({
       { headers: form.getHeaders() }
     );
 
+    // LOG THE ACTUAL RESPONSE FOR DEBUGGING
+    console.log("File.io response:", resp.data);
+
     fs.unlinkSync(tempFile);
 
     const mediaUrl = resp.data.link;
