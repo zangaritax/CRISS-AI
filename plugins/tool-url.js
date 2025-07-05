@@ -3,7 +3,7 @@ const FormData = require('form-data');
 const fs = require('fs');
 const os = require('os');
 const path = require("path");
-const { cmd, commands } = require("../command");
+const { cmd } = require("../command");
 
 cmd({
   pattern: "tourl",
@@ -38,11 +38,9 @@ cmd({
       { headers: form.getHeaders() }
     );
 
-    // LOG THE ACTUAL RESPONSE FOR DEBUGGING
-    console.log("File.io response:", resp.data);
-
     fs.unlinkSync(tempFile);
 
+    // Use resp.data.link directly!
     const mediaUrl = resp.data.link;
     if (!mediaUrl) throw "Error obtaining uploaded URL";
 
