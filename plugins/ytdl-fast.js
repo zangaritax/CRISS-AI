@@ -1,7 +1,6 @@
 const config = require('../config');
 const { cmd } = require('../command');
 const { ytsearch } = require('@dark-yasiya/yt-dl.js');
-const fetch = require('node-fetch');
 
 // MP4 video download
 
@@ -16,10 +15,7 @@ cmd({
 }, async (conn, mek, m, { from, prefix, quoted, q, reply }) => { 
     try { 
         if (!q) return await reply("Please provide a YouTube URL or video name.");
-
-        // Fast reply: searching for video (do NOT await so it replies instantly)
-        conn.sendMessage(from, { text: "🔍 ᴄʀɪss ᴀɪ is searching for your video..." }, { quoted: mek });
-
+        
         const yt = await ytsearch(q);
         if (yt.results.length < 1) return reply("No results found!");
         
@@ -33,28 +29,21 @@ cmd({
             return reply("Failed to fetch the video. Please try again later.");
         }
 
-        let ytmsg = `
+        let ytmsg = `📹 *Video Downloader*
 🎬 *Title:* ${yts.title}
+⏳ *Duration:* ${yts.timestamp}
+👀 *Views:* ${yts.views}
+👤 *Author:* ${yts.author.name}
+🔗 *Link:* ${yts.url}
+> Powered By CRISS AI ❤️`;
 
-✅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`;
-
-        // Send video with caption and forwarding context
+        // Send video directly with caption
         await conn.sendMessage(
             from, 
             { 
                 video: { url: data.result.download_url }, 
                 caption: ytmsg,
-                mimetype: "video/mp4",
-                contextInfo: { 
-                    mentionedJid: [m.sender],
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363417599637828@newsletter',
-                        newsletterName: 'CRISS AI',
-                        serverMessageId: 143
-                    }
-                }
+                mimetype: "video/mp4"
             }, 
             { quoted: mek }
         );
@@ -79,9 +68,6 @@ cmd({
     try {
         if (!q) return reply("Please provide a song name or YouTube link.");
 
-        // Fast reply: searching for song (do NOT await so it replies instantly)
-        conn.sendMessage(from, { text: "🔍 ᴄʀɪss ᴀɪ is searching for your song..." }, { quoted: mek });
-
         const yt = await ytsearch(q);
         if (!yt.results.length) return reply("No results found!");
 
@@ -93,39 +79,23 @@ cmd({
 
         if (!data?.result?.downloadUrl) return reply("Download failed. Try again later.");
 
-        // 1. Send image (thumbnail) with song title and powered by text, with forwarding context
-        let imgUrl = song.thumbnail || "https://i.ibb.co/7yz1C9S/music-note.png"; // fallback image
-        await conn.sendMessage(from, {
-            image: { url: imgUrl },
-            caption: `🎵 *${song.title}*\n\n✅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴄʀɪss ᴠᴇᴠᴏ`,
-            contextInfo: { 
-                mentionedJid: [m.sender],
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363417599637828@newsletter',
-                    newsletterName: 'CRISS AI',
-                    serverMessageId: 143
-                }
-            }
-        }, { quoted: mek });
-
-        // 2. Send audio with forwarding context
-        await conn.sendMessage(from, {
-            audio: { url: data.result.downloadUrl },
-            mimetype: "audio/mpeg",
-            fileName: `${song.title}.mp3`,
-            contextInfo: { 
-                mentionedJid: [m.sender],
-                forwardingScore: 999,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363417599637828@newsletter',
-                    newsletterName: 'CRISS AI',
-                    serverMessageId: 143
-                }
-            }
-        }, { quoted: mek });
+    await conn.sendMessage(from, {
+    audio: { url: data.result.downloadUrl },
+    mimetype: "audio/mpeg",
+    fileName: `${song.title}.mp3`,
+    contextInfo: {
+        externalAdReply: {
+            title: song.title.length > 25 ? `${song.title.substring(0, 22)}...` : song.title,
+            body: "Follow our WhatsApp Channel",
+            mediaType: 1,
+            thumbnailUrl: song.thumbnail.replace('default.jpg', 'hqdefault.jpg'),
+            sourceUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
+            mediaUrl: 'https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t',
+            showAdAttribution: true,
+            renderLargerThumbnail: true
+        }
+    }
+}, { quoted: mek });
 
     } catch (error) {
         console.error(error);

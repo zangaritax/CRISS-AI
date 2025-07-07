@@ -3,57 +3,69 @@ const FormData = require('form-data');
 const fs = require('fs');
 const os = require('os');
 const path = require("path");
-const { cmd } = require("../command");
+const { cmd, commands } = require("../command");
 
 cmd({
-  pattern: "tourl",
-  alias: ["imgtourl", "imgurl", "url", "geturl", "upload"],
-  react: '🖇',
-  desc: "Convert media to URL (uses pixeldrain.com API)",
-  category: "utility",
-  use: ".tourl [reply to media]",
-  filename: __filename
+  'pattern': "tourl",
+  'alias': ["imgtourl", "imgurl", "url", "geturl", "upload"],
+  'react': '🖇',
+  'desc': "Convert media to Catbox URL",
+  'category': "utility",
+  'use': ".tourl [reply to media]",
+  'filename': __filename
 }, async (client, message, args, { reply }) => {
   try {
+    // Check if quoted message exists and has media
     const quotedMsg = message.quoted ? message.quoted : message;
     const mimeType = (quotedMsg.msg || quotedMsg).mimetype || '';
-    if (!mimeType) throw "Please reply to an image, video, or audio file";
+    
+    if (!mimeType) {
+      throw "Please reply to an image, video, or audio file";
+    }
 
+    // Download the media
     const mediaBuffer = await quotedMsg.download();
-    const tempFile = path.join(os.tmpdir(), `upload_${Date.now()}`);
-    fs.writeFileSync(tempFile, mediaBuffer);
+    const tempFilePath = path.join(os.tmpdir(), `catbox_upload_${Date.now()}`);
+    fs.writeFileSync(tempFilePath, mediaBuffer);
 
-    let ext = '';
-    if (mimeType.includes('image/jpeg')) ext = '.jpg';
-    else if (mimeType.includes('image/png')) ext = '.png';
-    else if (mimeType.includes('video')) ext = '.mp4';
-    else if (mimeType.includes('audio')) ext = '.mp3';
+    // Get file extension based on mime type
+    let extension = '';
+    if (mimeType.includes('image/jpeg')) extension = '.jpg';
+    else if (mimeType.includes('image/png')) extension = '.png';
+    else if (mimeType.includes('video')) extension = '.mp4';
+    else if (mimeType.includes('audio')) extension = '.mp3';
+    
+    const fileName = `file${extension}`;
 
+    // Prepare form data for Catbox
     const form = new FormData();
-    form.append('file', fs.createReadStream(tempFile), `file${ext}`);
+    form.append('fileToUpload', fs.createReadStream(tempFilePath), fileName);
+    form.append('reqtype', 'fileupload');
 
-    const resp = await axios.post(
-      "https://pixeldrain.com/api/file",
-      form,
-      { headers: form.getHeaders() }
-    );
+    // Upload to Catbox
+    const response = await axios.post("https://catbox.moe/user/api.php", form, {
+      headers: form.getHeaders()
+    });
 
-    fs.unlinkSync(tempFile);
+    if (!response.data) {
+      throw "Error uploading to Catbox";
+    }
 
-    if (!resp.data || !resp.data.id)
-      throw "Error obtaining uploaded URL";
+    const mediaUrl = response.data;
+    fs.unlinkSync(tempFilePath);
 
-    const mediaUrl = `https://pixeldrain.com/u/${resp.data.id}`;
+    // Determine media type for response
     let mediaType = 'File';
     if (mimeType.includes('image')) mediaType = 'Image';
     else if (mimeType.includes('video')) mediaType = 'Video';
     else if (mimeType.includes('audio')) mediaType = 'Audio';
 
+    // Send response
     await reply(
       `*${mediaType} Uploaded Successfully*\n\n` +
       `*Size:* ${formatBytes(mediaBuffer.length)}\n` +
       `*URL:* ${mediaUrl}\n\n` +
-      `> Uploaded by CRISS AI 💜`
+      `> © Uploaded by CRISS AI 💜`
     );
 
   } catch (error) {
@@ -62,6 +74,7 @@ cmd({
   }
 });
 
+// Helper function to format bytes
 function formatBytes(bytes) {
   if (bytes === 0) return '0 Bytes';
   const k = 1024;
