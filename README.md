@@ -17,14 +17,6 @@
   </a>
 
 
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-
-
-
- <p align="left">
-<a href="https://session.crissvevo.co.tz" target="_blank">
-    <img alt='REQUEST PAIR CODE' src='https://img.shields.io/badge/Get_Pair_code-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=darkorange&color=darkorange'/>
-
 <!-- Action Buttons -->
 <p align="center">
   <a href="https://session.crissvevo.co.tz">
