@@ -38,7 +38,9 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 <p align="left">
-<a href="https://deploy-on-render-alpha.vercel.app" target="_blank"><img title="DEPLOY-ON RENDER" src="https://img.shields.io/badge/DEPLOY%20ON%20RENDER-white" alt="Heroku" width="300"></a>
+<a href="https://deploy-on-render-alpha.vercel.app" target="_blank">
+  <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render"/>
+</a>
 </p>
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
