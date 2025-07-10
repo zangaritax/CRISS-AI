@@ -24,7 +24,8 @@
 
 
  <p align="left">
-<a href="https://session.crissvevo.co.tz"><img src="https://img.shields.io/badge/Get%20Session%20-white" alt=" 𝐬𝐞𝐬𝐬𝐢𝐨𝐧 02" width="200"></a>
+<a href="https://session.crissvevo.co.tz" target="_blank">
+    <img alt='REQUEST PAIR CODE' src='https://img.shields.io/badge/Get_Pair_code-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=darkorange&color=darkorange'/>
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
