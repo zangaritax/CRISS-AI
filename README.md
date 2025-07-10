@@ -39,7 +39,7 @@
 
 <p align="left">
 <a href="https://deploy-on-render-alpha.vercel.app" target="_blank">
-  <img src="https://render.com/images/deploy-to-heroku-button.svg" alt="Deploy to Render"/>
+  <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render"/>
 </a>
 </p>
 
