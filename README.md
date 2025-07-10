@@ -22,7 +22,6 @@
   <a href="https://session.crissvevo.co.tz">
     <img title="GET SESSION OPT 1" src="https://img.shields.io/badge/🔑_GET_CRISS_AI_SESSION-000000?style=for-the-badge&logo=quantum&logoColor=white&color=skyblue" width="260" height="50"/>
   </a>
-/a>
 
 <p align="left">
   <a href="https://criss-ai.vercel.app">
@@ -33,7 +32,7 @@
 
 
 
-<p align="center">
+<p align="left">
   <a href="https://deploy-on-render-alpha.vercel.app">
     <img title="DEPLOY ON RENDER" src="https://img.shields.io/badge/🚀_DEPLOY_ON_RENDER-000000?style=for-the-badge&logo=render&logoColor=white&color=61DAFB" width="260" height="50"/>
   </a>
