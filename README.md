@@ -8,8 +8,6 @@
 </p>
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-
-
   </p>
 
 <p align="center">
@@ -42,7 +40,6 @@
 
 <p align="center">
   <img src="https://i.imgur.com/dBaSKWF.gif" height="40" width="100%">
-</p>
 
 <h1 align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&duration=3000&color=00FF00&background=000000&center=true&vCenter=true&width=600&lines=⚡+CRISS+AI+PRO+VERSION;🔥+The+Most+Powerful+WhatsApp+Bot;💻+Crafted+by+Criss+Vevo;🚀+Next-Gen+Ai+Technology;🌈+Fast+⚡+Secure+🔒+Reliable+✅" alt="Typing Animation">
