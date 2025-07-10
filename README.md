@@ -25,6 +25,12 @@
 <a href="https://session.crissvevo.co.tz" target="_blank">
     <img alt='REQUEST PAIR CODE' src='https://img.shields.io/badge/Get_Pair_code-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=darkorange&color=darkorange'/>
 
+<!-- Action Buttons -->
+<p align="center">
+  <a href="https://session.crissvevo.co.tz">
+    <img title="GET SESSION OPT 1" src="https://img.shields.io/badge/🔑_GET_CRISS_AI_SESSION-000000?style=for-the-badge&logo=quantum&logoColor=white&color=skyblue" width="260" height="50"/>
+  </a>
+
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
   <a href="https://criss-ai.vercel.app">
