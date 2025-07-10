@@ -11,13 +11,6 @@
 
 
 #### SETUP 
-<p align="center">
-  <a href="https://www.ibrahimadams.site/Deploy">
-    <img title="DEPLOY QUANTUM BOT" src="https://img.shields.io/badge/🚀_FORK-000000?style=for-the-badge&logo=heroku&logoColor=white&color=FF00FF" width="260" height="50"/>
-  </a>
-</p>
-
-
 <p align="left">
 <a href="https://github.com/criss-vevo/CRISS-AI/fork" target="_blank" style="margin-right: 10px;">
     <img alt='Fork Repo' src='https://img.shields.io/badge/Fork Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=orange&color=darkgreen'/>
