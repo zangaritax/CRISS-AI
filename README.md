@@ -38,3 +38,9 @@
   <a href="https://deploy-on-render-alpha.vercel.app">
     <img title="DEPLOY ON RENDER" src="https://img.shields.io/badge/🚀_DEPLOY_ON_RENDER-000000?style=for-the-badge&logo=render&logoColor=white&color=61DAFB" width="260" height="50"/>
   </a>
+</p>
+
+
+<h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&duration=3000&color=00FF00&background=000000&center=true&vCenter=true&width=600&lines=⚡+CRISS+AI+PRO+VERSION;🔥+The+Most+Powerful+WhatsApp+Bot;💻+Crafted+by+Criss+Vevo;🚀+Next-Gen+Ai+Technology;🌈+Fast+⚡+Secure+🔒+Reliable+✅" alt="Typing Animation">
+</h1>
