@@ -13,10 +13,7 @@
 #### SETUP 
 
 
-<p align="left">
-<a href="https://github.com/criss-vevo/CRISS-AI/fork" target="_blank" style="margin-right: 10px;">
-    <img alt='Fork Repo' src='https://img.shields.io/badge/Fork Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=orange&color=darkgreen'/>
-  </a>
+
 
 
   <a href="https://github.com/criss-vevo/CRISS-AI/fork">
