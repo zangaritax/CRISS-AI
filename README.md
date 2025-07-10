@@ -10,7 +10,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 
-#### SETUPS 
+  </p>
 
 <p align="center">
   <a href="https://github.com/criss-vevo/CRISS-AI/fork">
