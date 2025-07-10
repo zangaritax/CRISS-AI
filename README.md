@@ -37,21 +37,3 @@
   <a href="https://deploy-on-render-alpha.vercel.app">
     <img title="DEPLOY ON RENDER" src="https://img.shields.io/badge/🚀_DEPLOY_ON_RENDER-000000?style=for-the-badge&logo=render&logoColor=white&color=61DAFB" width="260" height="50"/>
   </a>
-</p>
-
-<div align="left">
-  <a href="https://whatsapp.com/channel/0029VbAhCy8EquiTSb5pMS3t">
-    <img src="https://img.shields.io/badge/Join-WhatsApp%20Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=000000" width="330"></a>
-  </a>
-</div>
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=criss-vevo&show_icons=true&locale=en" alt="criss-vevo" /></p>
-
-</div>
-
----
-
-> **Current Bot Version `5.0.0`**  
-
----
-
