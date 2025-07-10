@@ -12,13 +12,10 @@
 
 #### SETUP 
 
-
-
-
-
   <a href="https://github.com/criss-vevo/CRISS-AI/fork">
     <img title="FORK CRISS AI REPO" src="https://img.shields.io/badge/📁_FORK_CRISS_AI_REPO-000000?style=for-the-badge&logo=files&logoColor=white&color=FFA500" width="260" height="50"/>
   </a>
+  </p>
 
 <!-- Action Buttons -->
 <p align="left">
