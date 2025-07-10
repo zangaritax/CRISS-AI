@@ -14,7 +14,9 @@
 
 
 <p align="left">
-<a href="https://github.com/criss-vevo/CRISS-AI/fork"><img src="https://img.shields.io/badge/Fork-white" alt="𝐅𝐨𝐫𝐤" width="100"></a>
+<a href="https://github.com/criss-vevo/CRISS-AI/fork" target="_blank" style="margin-right: 10px;">
+    <img alt='Fork Repo' src='https://img.shields.io/badge/Fork Repo-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=orange&color=darkgreen'/>
+  </a>
 
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
