@@ -11,7 +11,7 @@
 
 
 #### SETUP 
-
+<p align="center">
   <a href="https://www.ibrahimadams.site/Deploy">
     <img title="DEPLOY QUANTUM BOT" src="https://img.shields.io/badge/🚀_FORK-000000?style=for-the-badge&logo=heroku&logoColor=white&color=FF00FF" width="260" height="50"/>
   </a>
